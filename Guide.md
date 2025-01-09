@@ -134,6 +134,7 @@ In-game graphics settings won't be explained in too much depth, as the performan
 	If you wish to keep shadows enabled, counterintuitively setting them to high/ultra can sometimes yield more performance than low/medium, as this switches most of the shadow rendering computation to the GPU.
 
 **GPU taxing settings which contribute to the most FPS loss are:**
+
 Please note that some of these settings may appear to have little to no performance impact if your CPU or RAM are the primary bottleneck.
 * Sampling.
 	* Generally recommended to keep at 100%, setting this higher can result in worse FPS while barely improving visual quality.
