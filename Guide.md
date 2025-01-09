@@ -43,7 +43,8 @@ Only the recommended parameters for general use & optimal performance will be li
 * Memory allocator (64-bit)
 	* Enables the ability to switch between different memory allocators. mimalloc is *highly* recommended for this, otherwise disable unless experimenting with the already provided memory allocators.
 * Enabled Large-page Support
-	* Recommended to enable for additional performance. This is an alternative memory management technique that uses larger memory blocks than the default (4KB) page size.
+	* Recommended to enable for additional performance. This is an alternative memory management technique that uses larger memory blocks than the default (4KB) page size.  
+	<sub>mimalloc will always attempt to use Large Pages regardless of the state of this parameter.</sub>
 
 # Memory Allocators
 Memory allocators are application components that manage how it allocates and deallocates its data in RAM.
@@ -63,7 +64,7 @@ Memory allocators are application components that manage how it allocates and de
 * Tick the checkbox, which will now highlight a drop-down list next to it.
 * From that drop-down list, select the name of the memory allocator you want to use.
 
-<sup>To revert back to the default memory allocator follow these same steps, instead selecting "Intel TBB 4 allocator".</sup>
+	<sup>To revert back to the default memory allocator follow these same steps, instead selecting "Intel TBB 4 allocator".</sup>
 
 ## mimalloc
 mimalloc is a high performance memory allocator managed & maintained by Microsoft.  
@@ -79,7 +80,7 @@ John Gold King's mimalloc supports the "Lock Pages in Memory (LPIM)" feature whi
 
 **Enabling Lock Pages in Memory:**
 
-Please note that a **Professional** edition of Windows is required to access the LPIM feature.
+Please note that a **Professional, Enterprise or Education** edition of Windows is required to access the LPIM feature.
 
 * Press the keyboard shortcut Windows+R to open the Run command.
 * Type "gpedit.msc" into the text box, then press Enter or click "OK" to open the Local Group Policy Editor.
