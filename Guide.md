@@ -103,6 +103,7 @@ Arma 3 has a publicly available branch utilizing performance binaries which can 
 **At the time of writing this, Dedmen is currently testing multiple mulithreading improvements on the profiling build, which can significantly increase in-game performance.**
 
 **The profiling branch also serves as somewhat of a beta testing environment for changes and bug fixes that will later come to official updates for the game. As such from time to time you can experience bugs while using it, and should temporarily revert to stable or the previous profiling build if they affect your gameplay too much.**
+
 To get new profiling bugs fixed faster, you can report them in the **#perf_prof_branch** channel found in the official Arma [Discord server](https://discord.com/invite/arma).
 
 ## Accessing the profiling build
