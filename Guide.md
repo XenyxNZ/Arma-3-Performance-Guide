@@ -122,9 +122,9 @@ There are two methods for switching to the profiling build:
 	To revert back off of the profiling build follow these same steps, instead selecting "None" in the drop-down list.
 	
 * **Manually replacing the game executables:**
+	* Visit the Bohemia forum thread found [here](https://forums.bohemia.net/forums/topic/160288-arma-3-stable-server-218-profiling-performance-binary-feedback/), then follow the steps to download and replace the game executables.
 
 This method can also be used for reverting to previous profiling builds if bugs are occurring on the latest one.
-	* Visit the Bohemia forum thread found [here](https://forums.bohemia.net/forums/topic/160288-arma-3-stable-server-218-profiling-performance-binary-feedback/), then follow the steps to download and replace the game executables.
 
 # Graphical Settings
 
