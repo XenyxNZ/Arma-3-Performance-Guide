@@ -32,7 +32,7 @@ The game launcher has a parameters section where you can configure which system 
 * Click on "All Parameters" found at the top of the parameters tab.
 
 ### Setting parameters
-Only the recommended features for general use & optimal performance will be listed.
+Only the recommended parameters for general use & optimal performance will be listed.
 
 * Show static background in menu
 	* Enable this to prevent the game from loading the world for display in the background, unnecessarily consuming resources.
