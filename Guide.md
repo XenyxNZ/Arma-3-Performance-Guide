@@ -74,6 +74,7 @@ John Gold King has created a fork of it which is designed to be compatible with 
 
 ### Downloading mimalloc
 mimalloc is available at John Gold King's GitHub page, which can be found [here](https://github.com/GoldJohnKing/mimalloc/releases).
+
 * To download the latest, or previous versions of mimalloc, look for the "Assets" section found at the bottom of each release, then download the **.dll** file contained within it. Downloading the Source code (zip) and (tar.gz) is not necessary.
 
 ### Taking full advantage of mimalloc
