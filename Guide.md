@@ -64,6 +64,7 @@ Memory allocators are application components that manage how it allocates and de
 * Scroll down to the "Advanced" section, and look for "Memory allocator (64-bit)".
 * Tick the checkbox, which will now highlight a drop-down list next to it.
 * From that drop-down list, select the name of the memory allocator you want to use.
+
 To revert back to the default memory allocator follow these same steps, instead selecting "Intel TBB 4 allocator".
 
 ## mimalloc
@@ -78,7 +79,9 @@ mimalloc is available at John Gold King's GitHub page, which can be found [here]
 John Gold King's mimalloc supports the "Lock Pages in Memory (LPIM)" feature which prevents Windows from shifting Arma 3's application data into virtual memory. This can increase in-game performance, as virtual memory is considerably slower than physical memory (RAM).
 
 **Enabling Lock Pages in Memory:**
+
 Please note that a **Professional** edition of Windows is required to access the LPIM feature.
+
 * Press the keyboard shortcut Windows+R to open the Run command.
 * Type "gpedit.msc" into the text box, then press Enter or click "OK" to open the Local Group Policy Editor.
 * On the left side of the Local Group Policy Editor window, expand the hierarchy as follows.
