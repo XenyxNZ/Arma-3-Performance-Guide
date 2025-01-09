@@ -137,6 +137,7 @@ In-game graphics settings won't be explained in too much depth, as the performan
 	*  Generally recommended to keep this at the minimum of what you require for your gameplay.
 * Shadows & shadow distance (when on low/med settings).
 	* Highly recommended to disable shadows, as their FPS reduction is often significant.
+
 	If you wish to keep shadows enabled, counterintuitively setting them to high/ultra can sometimes yield more performance than low/medium, as this switches most of the shadow rendering computation to the GPU.
 
 **GPU taxing settings which contribute to the most FPS loss are:**
