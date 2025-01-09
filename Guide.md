@@ -113,8 +113,8 @@ There are two methods for switching to the profiling build:
 	* Right-click Arma 3 in your Steam library list, then click "Properties...".
 	* On the left side of the newly opened window, click the "Betas" tab.
 	* Click the drop-down list in the top right corner of the Betas tab, then select "profiling - Performance Profiling Build".
-	* Steam will now perform a quick update, switching you over to the profiling build.
-	To revert back off of the profiling build follow these same steps, instead selecting "None" in the drop-down list.
+	* Steam will now perform a quick update, switching you over to the profiling build.  
+	<sub>To revert back off of the profiling build follow these same steps, instead selecting "None" in the drop-down list.</sub>
 	
 * **Manually replacing the game executables:**
 	* Visit the Bohemia forum thread found [here](https://forums.bohemia.net/forums/topic/160288-arma-3-stable-server-218-profiling-performance-binary-feedback/), then follow the steps to download and replace the game executables.  
