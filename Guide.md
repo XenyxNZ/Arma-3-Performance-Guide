@@ -6,7 +6,7 @@ Arma 3 is built on Bohemia's Real Virtuality engine which is heavily constrained
 
 ### How it can be better
 
-Arma 3 is very responsive to CPU single core performance, cache performance & size, as well as RAM bandwidth and latency. Nowadays it's possible to get very good out-of-the-box frame rates using a CPU which utilizes AMD's 3D V-Cache technology - these CPUs have significantly more on-board memory (cache), which the game will use to store frequently accessed data. CPU cache has significantly higher bandwidths than RAM, and the access latency is several times lower. Traditional overclocking techniques can still greatly improve performance, especially on Intel based systems and AMD systems without 3D V-Cache. Overclocking the CPU and RAM on systems utilizing 3D V-Cache can still reap performance benefits, however it's not necessary for good performance, as the baseline FPS is considerably higher.
+Arma 3 is very responsive to CPU single core performance, cache performance & size, as well as RAM bandwidth and latency. Nowadays it's possible to get very good out-of-the-box frame rates using a CPU which utilizes AMD's 3D V-Cache technology - these CPUs have significantly more on-board memory (cache), which the game will use to store frequently accessed data. CPU cache has significantly higher bandwidths than RAM, and the access latency is several times lower. Traditional overclocking techniques can still greatly improve performance, especially on Intel based systems and AMD systems without 3D V-Cache. Overclocking the CPU and RAM on systems utilizing 3D V-Cache can still reap performance benefits, however it's not necessary for good performance, as the baseline frame rate is considerably higher.
 
 ## Choice of hardware
 
