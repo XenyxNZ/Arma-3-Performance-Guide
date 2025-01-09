@@ -18,7 +18,7 @@ As mentioned above, an AMD CPU with 3D cache is *highly* recommended for your ne
 
 * For modern systems using DDR5, a kit of RAM running at 6000 Mt/s with a CAS latency (CL) of 30 or lower is recommended.
 
-<sup>Intel systems are able to utilize much higher memory speeds than 6000 Mt/s, however as of writing this, the ability to stably run speeds beyond ~6800 MT/s is extremely dependent on the motherboard & quality of the CPU's integrated memory controller (IMC). I won't go into any deeper of an explanation than that, as it would require a whole page solely dedicated to the explanation of various motherboard componentry, RAM ICs & CPU IMCs.</sup>
+<sup>Intel systems are able to utilize much higher memory speeds than 6000 Mt/s, however as of writing this, the ability to stably run speeds beyond ~6800 MT/s is extremely dependent on the motherboard & quality of the CPU's integrated memory controller (IMC).</sup>
 
 * For older systems using DDR4, a kit of RAM running at 3600 MT/s with a CAS latency (CL) of 16 or lower is recommended.
 
