@@ -134,9 +134,9 @@ In-game graphics settings won't be explained in too much depth, as the performan
 
 **GPU taxing settings which contribute to the most FPS loss are:**
 
-Please note that some of these settings may appear to have little to no performance impact if your CPU or RAM are the primary bottleneck.
+<sup>Please note that some of these settings may appear to have little to no performance impact if your CPU or RAM are the primary bottleneck.</sup>
 * Sampling.
-	* Generally recommended to keep at 100%, setting this higher can result in worse FPS while barely improving visual quality.
+	* Generally recommended to keep at 100%, setting this higher can result in lower FPS while barely improving visual quality.
 * Shadows & shadow distance (when on high/ultra settings).
 	* Highly recommended to disable shadows, as their FPS reduction is often significant.
 * Particles.
@@ -144,6 +144,6 @@ Please note that some of these settings may appear to have little to no performa
 * AO.
 	* Generally recommended to disable, often incurs a slight but measurable performance impact when enabled.
 * FSAA.
-	* Generally recommended to set to 2x or 4x, going higher can put a lot of strain on your GPU.
+	* Generally recommended to set to 2x or 4x, going higher can put a lot of strain on the GPU.
 * PPAA.
 	* CMAA is highly recommended as it looks almost identical to SMAA, while being significantly less GPU intensive.
