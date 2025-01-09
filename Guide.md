@@ -69,6 +69,7 @@ To revert back to the default memory allocator follow these same steps, instead 
 
 ## mimalloc
 mimalloc is a high performance memory allocator managed & maintained by Microsoft.
+
 John Gold King has created a fork of it which is designed to be compatible with Arma 3.
 
 ### Downloading mimalloc
