@@ -17,7 +17,8 @@ As mentioned above, an AMD CPU with 3D cache is *highly* recommended for your ne
 **RAM**
 
 * For modern systems using DDR5, a kit of RAM running at 6000 Mt/s with a CAS (CL) latency of 30 or lower is recommended.
-<small>Intel systems are able to utilize much higher memory speeds than 6000 Mt/s, however as of writing this, the ability to stably run speeds beyond ~6800 MT/s is extremely dependent on the motherboard & quality of the CPU's integrated memory controller (IMC). I won't go into any deeper of an explanation than that, as it would require a whole page solely dedicated to the explanation of various motherboard componentry, RAM ICs & CPU IMCs.
+
+Intel systems are able to utilize much higher memory speeds than 6000 Mt/s, however as of writing this, the ability to stably run speeds beyond ~6800 MT/s is extremely dependent on the motherboard & quality of the CPU's integrated memory controller (IMC). I won't go into any deeper of an explanation than that, as it would require a whole page solely dedicated to the explanation of various motherboard componentry, RAM ICs & CPU IMCs.
 
 * For older systems using DDR4, a kit of RAM running at 3600 MT/s with a CAS (CL) latency of 16 or lower is recommended.
 
@@ -63,7 +64,7 @@ Memory allocators are application components that manage how it allocates and de
 * Scroll down to the "Advanced" section, and look for "Memory allocator (64-bit)".
 * Tick the checkbox, which will now highlight a drop-down list next to it.
 * From that drop-down list, select the name of the memory allocator you want to use.
-<small>To revert back to the default memory allocator follow these same steps, instead selecting "Intel TBB 4 allocator". </small>
+To revert back to the default memory allocator follow these same steps, instead selecting "Intel TBB 4 allocator".
 
 ## mimalloc
 mimalloc is a high performance memory allocator managed & maintained by Microsoft.
@@ -77,7 +78,7 @@ mimalloc is available at John Gold King's GitHub page, which can be found [here]
 John Gold King's mimalloc supports the "Lock Pages in Memory (LPIM)" feature which prevents Windows from shifting Arma 3's application data into virtual memory. This can increase in-game performance, as virtual memory is considerably slower than physical memory (RAM).
 
 **Enabling Lock Pages in Memory:**
-<small>Please note that a **Professional** edition of Windows is required to access the LPIM feature.</small>
+Please note that a **Professional** edition of Windows is required to access the LPIM feature.
 * Press the keyboard shortcut Windows+R to open the Run command.
 * Type "gpedit.msc" into the text box, then press Enter or click "OK" to open the Local Group Policy Editor.
 * On the left side of the Local Group Policy Editor window, expand the hierarchy as follows.
@@ -101,8 +102,8 @@ Arma 3 has a publicly available branch utilizing performance binaries which can 
 
 **At the time of writing this, Dedmen is currently testing multiple mulithreading improvements on the profiling build, which can significantly increase in-game performance.**
 
-<small>**The profiling branch also serves as somewhat of a beta testing environment for changes and bug fixes that will later come to official updates for the game. As such from time to time you can experience bugs while using it, and should temporarily revert to stable or the previous profiling build if they affect your gameplay too much.**
-To get new profiling bugs fixed faster, you can report them in the **#perf_prof_branch** channel found in the official Arma [Discord server](https://discord.com/invite/arma).</small>
+**The profiling branch also serves as somewhat of a beta testing environment for changes and bug fixes that will later come to official updates for the game. As such from time to time you can experience bugs while using it, and should temporarily revert to stable or the previous profiling build if they affect your gameplay too much.**
+To get new profiling bugs fixed faster, you can report them in the **#perf_prof_branch** channel found in the official Arma [Discord server](https://discord.com/invite/arma).
 
 ## Accessing the profiling build
 There are two methods for switching to the profiling build:
@@ -112,10 +113,10 @@ There are two methods for switching to the profiling build:
 	* On the left side of the newly opened window, click the "Betas" tab.
 	* Click the drop-down list in the top right corner of the Betas tab, then select "profiling - Performance Profiling Build".
 	* Steam will now perform a quick update, switching you over to the profiling build.
-	<small>To revert back off of the profiling build follow these same steps, instead selecting "None" in the drop-down list.</small>
+	To revert back off of the profiling build follow these same steps, instead selecting "None" in the drop-down list.
 	
 * **Manually replacing the game executables:**
-	<small>This method can also be used for reverting to previous profiling builds if bugs are occurring on the latest one.</small>
+	This method can also be used for reverting to previous profiling builds if bugs are occurring on the latest one.
 	* Visit the Bohemia forum thread found [here](https://forums.bohemia.net/forums/topic/160288-arma-3-stable-server-218-profiling-performance-binary-feedback/), then follow the steps to download and replace the game executables.
 
 # Graphical Settings
@@ -129,10 +130,10 @@ In-game graphics settings won't be explained in too much depth, as the performan
 	*  Generally recommended to keep this at the minimum of what you require for your gameplay.
 * Shadows & shadow distance (when on low/med settings).
 	* Highly recommended to disable shadows, as their FPS reduction is often significant.
-		<small>If you wish to keep shadows enabled, counterintuitively setting them to high/ultra can sometimes yield more performance than low/medium, as this switches most of the shadow rendering computation to the GPU.</small>
+	If you wish to keep shadows enabled, counterintuitively setting them to high/ultra can sometimes yield more performance than low/medium, as this switches most of the shadow rendering computation to the GPU.
 
 **GPU taxing settings which contribute to the most FPS loss are:**
-<small>Please note that some of these settings may appear to have little to no performance impact if your CPU or RAM are the primary bottleneck.</small>
+Please note that some of these settings may appear to have little to no performance impact if your CPU or RAM are the primary bottleneck.
 * Sampling.
 	* Generally recommended to keep at 100%, setting this higher can result in worse FPS while barely improving visual quality.
 * Shadows & shadow distance (when on high/ultra settings).
