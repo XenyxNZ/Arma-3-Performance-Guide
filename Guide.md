@@ -134,7 +134,7 @@ In-game graphics settings won't be explained in too much depth, as the performan
 
 **GPU taxing settings which contribute to the most FPS loss are:**
 
-<sup>Please note that some of these settings may appear to have little to no performance impact if your CPU or RAM are the primary bottleneck.</sup>
+<sup>Please note that some of these settings may appear to have little to no performance impact if the CPU or RAM are the primary bottleneck.</sup>
 * Sampling.
 	* Generally recommended to keep at 100%, setting this higher can result in lower FPS while barely improving visual quality.
 * Shadows & shadow distance (when on high/ultra settings).
