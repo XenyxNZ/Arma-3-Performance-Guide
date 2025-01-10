@@ -149,3 +149,29 @@ In-game graphics settings won't be explained in too much depth, as the performan
 	* Generally recommended to set to 2x or 4x, going higher can greatly increase strain on the GPU.
 * PPAA.
 	* CMAA is highly recommended as it looks almost identical to SMAA, while being significantly less GPU intensive.
+
+# Yet Another Arma Benchmark (YAAB)
+YAAB is a widely used Arma 3 performance benchmarking scenario made by Sams.  
+It is ideal for measuring differences in performance while experimenting with graphical settings, memory allocators, profiling builds, etc.
+
+## Downloading & using YAAB
+
+### Downloading YAAB
+Visit the Steam Workshop link [here](https://steamcommunity.com/sharedfiles/filedetails/?id=375092418) to subscribe to the scenario.
+
+Alternatively, you can navigate to the Workshop in your Steam client, then search for "YAAB" to subscribe to it through there.
+
+### Using YAAB
+* Start Arma 3.
+* Once in the main menu, highlight the "Singleplayer" button up the top left, then click "Scenarios" in the dropdown menu.
+* Double-click the "Yet Another Arma Benchmark" scenario found under the "Steam subscribed content" section.
+* The scenario will now load and automatically play through the benchmark scenes, providing performance results at the end.
+
+## Some things to note
+* Pressing "S" after the scenario has loaded will temporarily apply some standard graphics settings for the duration of the benchmark.
+* When benchmarking to compare different settings, it is generally recommended to keep your view distance relatively low (<2km). Higher view distances can quickly cause a CPU bottleneck, significantly lessening the measurable differences, which can make it more difficult to discern if your changes are having any affect on performance.
+* To determine a proper average, it is recommended to run the benchmark 3-5 times.
+* Results can vary slightly without changing anything. This is due to the AI heavy nature of the benchmark, and Arma 3 being sensitive to fluctuating CPU & RAM resources.
+* For the most consistent results, it is recommended to close all other applications while benchmarking.
+* When comparing results with other people, it is highly recommended to make sure you are using identical graphics settings, memory allcators, parameters and builds of the game to isolate everything except differences in hardware.
+* Having mods enabled can affect performance, even if they are not being used in the scenario.
