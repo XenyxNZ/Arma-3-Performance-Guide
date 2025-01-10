@@ -1,4 +1,4 @@
-# Understanding hardware performance in Arma 3
+# Understanding performance in Arma 3
 
 ### Why it's not great
 
