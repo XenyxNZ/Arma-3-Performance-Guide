@@ -174,4 +174,4 @@ Alternatively, you can navigate to the Workshop in your Steam client, then searc
 * Results can vary slightly without changing anything. This is due to the AI heavy nature of the benchmark, and Arma 3 being sensitive to fluctuating CPU & RAM resources.
 * For the most consistent results, it is recommended to close all other applications while benchmarking.
 * When comparing results with other people, it is highly recommended to make sure you are using identical graphics settings, memory allcators, parameters and builds of the game to isolate everything except differences in hardware.
-* Having mods enabled can affect performance, even if they are not being used in the scenario.
+* Having mods enabled can affect performance results, even if they are not being used in the scenario.
