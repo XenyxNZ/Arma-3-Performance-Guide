@@ -16,9 +16,8 @@ As mentioned above, an AMD CPU with 3D V-Cache is *highly* recommended for your 
 
 **RAM**
 
-* For modern systems using DDR5, a kit of RAM running at 6000 MT/s with a CAS latency (CL) of 30 or lower is recommended.
-
-<sup>Intel systems are able to utilize much higher memory speeds than 6000 MT/s, however as of writing this, the ability to stably run speeds beyond ~6800 MT/s is extremely dependent on the motherboard & quality of the CPU's integrated memory controller (IMC).</sup>
+* For modern systems using DDR5, a kit of RAM running at 6000 MT/s with a CAS latency (CL) of 30 or lower is recommended.  
+<sub>Intel systems are able to utilize much higher memory speeds than 6000 MT/s, however as of writing this, the ability to stably run speeds beyond ~6800 MT/s is extremely dependent on the motherboard & quality of the CPU's integrated memory controller (IMC).</sub>
 
 * For older systems using DDR4, a kit of RAM running at 3600 MT/s with a CAS latency (CL) of 16 or lower is recommended.
 
@@ -44,14 +43,14 @@ Only the recommended parameters for general use & optimal performance will be li
 	* Enables the ability to switch between different memory allocators. mimalloc is *highly* recommended for this, otherwise disable unless experimenting with the already provided memory allocators.
 * Enabled Large-page Support
 	* Recommended to enable for additional performance. This is an alternative memory management technique that uses larger memory blocks than the default (4KB) page size.  
-	<sub>mimalloc will always attempt to use Large Pages regardless of the state of this parameter.</sub>
+	<sub>mimalloc will always attempt to use Large-pages regardless of the state of this parameter.</sub>
 
 # Memory Allocators
 Memory allocators are application components that manage how it allocates and deallocates its data in RAM.
 
 ## Installing & using a memory allocator
 
-### Installing
+### Installing a memory allocator
 
 * Right-click Arma 3 in your Steam library list, highlight "Manage" then click "Browse local files". 
 * Open the "Dll" folder found in the game's install directory, then place the memory allocator **.dll** file in there.
@@ -64,7 +63,7 @@ Memory allocators are application components that manage how it allocates and de
 * Tick the checkbox, which will now highlight a drop-down list next to it.
 * From that drop-down list, select the name of the memory allocator you want to use.
 
-	<sup>To revert back to the default memory allocator follow these same steps, instead selecting "Intel TBB 4 allocator".</sup>
+	<sup>To revert back to the default memory allocator uncheck the "Memory allocator (64-bit)" checkbox, or follow these same steps, instead selecting "Intel TBB 4 allocator".</sup>
 
 ## mimalloc
 mimalloc is a high performance memory allocator managed & maintained by Microsoft.  
@@ -76,7 +75,7 @@ mimalloc is available at John Gold King's GitHub page, which can be found [here]
 * To download the latest, or previous versions of mimalloc, look for the "Assets" section found at the bottom of each release, then download the **.dll** file contained within it. Downloading the Source code (zip) and (tar.gz) is not necessary.
 
 ### Taking full advantage of mimalloc
-John Gold King's mimalloc supports the "Lock Pages in Memory (LPIM)" feature which prevents Windows from shifting Arma 3's application data into virtual memory. This can increase in-game performance, as virtual memory is considerably slower than physical memory (RAM).
+John Gold King's mimalloc supports the "Lock Pages in Memory" (LPIM) feature which prevents Windows from shifting Arma 3's application data into virtual memory. This can increase in-game performance, as virtual memory is considerably slower than physical memory (RAM).
 
 **Enabling Lock Pages in Memory:**
 
@@ -145,6 +144,6 @@ In-game graphics settings won't be explained in too much depth, as the performan
 * AO.
 	* Generally recommended to disable, often incurs a slight but measurable performance impact when enabled.
 * FSAA.
-	* Generally recommended to set to 2x or 4x, going higher can put a lot of strain on the GPU.
+	* Generally recommended to set to 2x or 4x, going higher can greatly increase strain on the GPU.
 * PPAA.
 	* CMAA is highly recommended as it looks almost identical to SMAA, while being significantly less GPU intensive.
