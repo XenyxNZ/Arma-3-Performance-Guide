@@ -123,7 +123,7 @@ There are two methods for switching to the profiling build:
 
 In-game graphics settings won't be explained in too much depth, as the performance optimisation [wiki page](https://community.bistudio.com/wiki/Arma_3:_Performance_Optimisation) covers all of the settings and what impact they have on performance, as well as which components they are most taxing on.
 
-**CPU taxing settings which contribute to the most FPS loss are:**
+### CPU intensive settings
 * View distance.
 	* Generally recommended to keep this at the minimum of what you require for your gameplay.
 * Object view distance.
@@ -133,7 +133,7 @@ In-game graphics settings won't be explained in too much depth, as the performan
  	**It is important to reduce shadow distance to the minimum value, as there is a bug which reduces FPS even if shadows are disabled.**  
 	<sub>If you wish to keep shadows enabled, counterintuitively setting them to high/ultra can sometimes yield more performance than low/medium, as this switches most of the shadow rendering computation to the GPU.</sub>
 
-**GPU taxing settings which contribute to the most FPS loss are:**
+### GPU intensive settings
 
 <sup>Please note that some of these settings may appear to have little to no performance impact if the CPU or RAM are the primary bottleneck.</sup>
 * Sampling.
