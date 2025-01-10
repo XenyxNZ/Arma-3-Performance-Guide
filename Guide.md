@@ -17,12 +17,12 @@ As mentioned above, an AMD CPU with 3D V-Cache is *highly* recommended for your 
 **RAM**
 
 * For modern systems using DDR5, a kit of RAM running at 6000 MT/s with a CAS latency (CL) of 30 or lower is recommended.  
-<sub>Intel systems are able to utilize much higher memory speeds than 6000 MT/s, however as of writing this, the ability to stably run speeds beyond ~6800 MT/s is extremely dependent on the motherboard & quality of the CPU's integrated memory controller (IMC).</sub>
+<sub>Intel systems are able to utilize much higher memory speeds than 6000 MT/s, however as of writing this, the ability to stably run speeds beyond ~6800 MT/s is extremely dependent on the motherboard and quality of the CPU's integrated memory controller (IMC).</sub>
 
 * For older systems using DDR4, a kit of RAM running at 3600 MT/s with a CAS latency (CL) of 16 or lower is recommended.
 
 # Game launcher
-The game launcher has a parameters section where you can configure which system features & resources the game can make use of.
+The game launcher has a parameters section where you can configure which system features and resources the game can make use of.
 
 ### Getting to the parameters
 
@@ -31,14 +31,14 @@ The game launcher has a parameters section where you can configure which system 
 * Click on "All Parameters" found at the top of the parameters tab.
 
 ### Setting parameters
-Only the recommended parameters for general use & optimal performance will be listed.
+Only the recommended parameters for general use and optimal performance will be listed.
 
 * Show static background in menu
 	* Enable this to prevent the game from loading the world for display in the background, unnecessarily consuming resources.
 * Skip logos at startup
 	* Enable this to disable the splash screens during start up, allowing you to get into the game faster.
 * CPU count
-	* Only recommended for use if you wish to *limit* how many cores the game has access to, otherwise when unchecked the game will use all available physical & virtual cores.
+	* Only recommended for use if you wish to *limit* how many cores the game has access to, otherwise when unchecked the game will use all available physical and virtual cores.
 * Memory allocator (64-bit)
 	* Enables the ability to switch between different memory allocators. mimalloc is *highly* recommended for this, otherwise disable unless experimenting with the already provided memory allocators.
 * Enabled Large-page Support
@@ -48,7 +48,7 @@ Only the recommended parameters for general use & optimal performance will be li
 # Memory allocators
 Memory allocators are application components that manage how it allocates and deallocates its data in RAM.
 
-## Installing & using a memory allocator
+## Installing and using a memory allocator
 
 ### Installing a memory allocator
 
@@ -66,7 +66,7 @@ Memory allocators are application components that manage how it allocates and de
 	<sup>To revert back to the default memory allocator uncheck the "Memory allocator (64-bit)" checkbox, or follow these same steps, instead selecting "Intel TBB 4 allocator".</sup>
 
 ## mimalloc
-mimalloc is a high performance memory allocator managed & maintained by Microsoft.  
+mimalloc is a high performance memory allocator managed and maintained by Microsoft.  
 John Gold King has created a fork of it which is designed to be compatible with Arma 3.
 
 ### Downloading mimalloc
@@ -128,7 +128,7 @@ In-game graphics settings won't be explained in too much depth, as the performan
 	* Generally recommended to keep this at the minimum of what you require for your gameplay.
 * Object view distance.
 	*  Generally recommended to keep this at the minimum of what you require for your gameplay.
-* Shadows & shadow distance (when on low/med settings).
+* Shadows and shadow distance (when on low/med settings).
 	* Highly recommended to disable shadows, as their FPS reduction is often significant.  
  	**It is important to reduce shadow distance to the minimum value, as there is a bug which reduces FPS even if shadows are disabled.**  
 	<sub>If you wish to keep shadows enabled, counterintuitively setting them to high/ultra can sometimes yield more performance than low/medium, as this switches most of the shadow rendering computation to the GPU.</sub>
@@ -138,7 +138,7 @@ In-game graphics settings won't be explained in too much depth, as the performan
 <sup>Please note that some of these settings may appear to have little to no performance impact if the CPU or RAM are the primary bottleneck.</sup>
 * Sampling.
 	* Generally recommended to keep at 100%, setting this higher can result in lower FPS while barely improving visual quality.
-* Shadows & shadow distance (when on high/ultra settings).
+* Shadows and shadow distance (when on high/ultra settings).
 	* Highly recommended to disable shadows, as their FPS reduction is often significant.  
 	**It is important to reduce shadow distance to the minimum value, as there is a bug which reduces FPS even if shadows are disabled.**
 * Particles.
@@ -154,7 +154,7 @@ In-game graphics settings won't be explained in too much depth, as the performan
 YAAB is a widely used Arma 3 performance benchmarking scenario made by Sams.  
 It is ideal for measuring differences in performance while experimenting with graphical settings, memory allocators, profiling builds, etc.
 
-## Downloading & using YAAB
+## Downloading and using YAAB
 
 ### Downloading YAAB
 Visit the Steam Workshop link [here](https://steamcommunity.com/sharedfiles/filedetails/?id=375092418) to subscribe to the scenario.
@@ -171,7 +171,7 @@ Alternatively, you can navigate to the Workshop in your Steam client, then searc
 * Pressing "S" after the scenario has loaded will temporarily apply some standard preset graphics settings for the duration of the benchmark.
 * When benchmarking to compare different settings, it is generally recommended to keep your view distance relatively low (<2km). Higher view distances can quickly cause a CPU bottleneck, significantly lessening the measurable differences, which can make it more difficult to discern if your changes are having any affect on performance.
 * To determine a proper average, it is recommended to run the benchmark 3-5 times.
-* Results can vary slightly without changing anything. This is due to the AI heavy nature of the benchmark, and Arma 3 being sensitive to fluctuating CPU & RAM resources.
+* Results can vary slightly without changing anything. This is due to the AI heavy nature of the benchmark, and Arma 3 being sensitive to fluctuating CPU and RAM resources.
 * For the most consistent results, it is recommended to close all other applications while benchmarking.
 * When comparing results with other people, it is highly recommended to make sure you are using identical graphics settings, memory allcators, parameters and builds of the game to isolate everything except differences in hardware.
 * Having mods enabled can affect performance results, even if they are not being used in the scenario.
