@@ -77,7 +77,7 @@ mimalloc is available at John Gold King's GitHub page, which can be found [here]
 ## Taking full advantage of memory allocators
 Arma 3 supports Large-pages, which is a feature that requires Lock Pages in Memory (LPIM) privileges. This prevents Windows from shifting Arma 3's application data into virtual memory. Enabling privileges for this can increase in-game performance, as virtual memory is significantly slower than physical memory (RAM).
 
-### Enabling Lock Pages in Memory:
+### Enabling Lock Pages in Memory
 
 Please note that a **Professional, Enterprise or Education** edition of Windows is required to access the LPIM feature.
 
