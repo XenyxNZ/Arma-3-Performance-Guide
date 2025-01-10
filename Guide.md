@@ -168,7 +168,7 @@ Alternatively, you can navigate to the Workshop in your Steam client, then searc
 * The scenario will now load and automatically play through the benchmark scenes, providing performance results at the end.
 
 ## Some things to note
-* Pressing "S" after the scenario has loaded will temporarily apply some standard graphics settings for the duration of the benchmark.
+* Pressing "S" after the scenario has loaded will temporarily apply some standard preset graphics settings for the duration of the benchmark.
 * When benchmarking to compare different settings, it is generally recommended to keep your view distance relatively low (<2km). Higher view distances can quickly cause a CPU bottleneck, significantly lessening the measurable differences, which can make it more difficult to discern if your changes are having any affect on performance.
 * To determine a proper average, it is recommended to run the benchmark 3-5 times.
 * Results can vary slightly without changing anything. This is due to the AI heavy nature of the benchmark, and Arma 3 being sensitive to fluctuating CPU & RAM resources.
