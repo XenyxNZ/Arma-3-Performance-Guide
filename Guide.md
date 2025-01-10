@@ -2,7 +2,7 @@
 
 ### Why it's not great
 
-Arma 3 is built on Bohemia's Real Virtuality engine which is heavily constrained by the CPU and RAM. Contrary to popular belief, the game does actually utilize multithreading, and has since release - however the system for it causes severe performance bottlenecks in some critical areas. This is why even the most modern, high-end systems can still struggle to run Arma 3 at high frame rates.
+Arma 3 is built on Bohemia's Real Virtuality engine, which is heavily constrained by the CPU and RAM. Contrary to popular belief, the game does actually utilize multithreading, and has since release - however this system can still cause severe performance bottlenecks in critical aspects due to its design. This is why even the most modern, high-end systems sometimes struggle to run Arma 3 at high frame rates 10+ years after its release.
 
 ### How it can be better
 
