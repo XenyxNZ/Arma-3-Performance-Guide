@@ -43,7 +43,7 @@ Only the recommended parameters for general use & optimal performance will be li
 	* Enables the ability to switch between different memory allocators. mimalloc is *highly* recommended for this, otherwise disable unless experimenting with the already provided memory allocators.
 * Enabled Large-page Support
 	* Recommended to enable for additional performance. This is an alternative memory management technique that uses larger memory blocks than the default (4KB) page size.  
-	<sub>Please note that your Windows profile may not have the required privileges to use Large-pages even if this parameter is enabled, as they are kept in physical memory. Keeping data in physical memory requires the Lock Pages in Memory privilege discussed in the Memory allocator section.</sub>
+	<sub>Please note that your Windows profile may not have the required privileges to use Large-pages even if this parameter is enabled, as they are kept in physical memory. Keeping data in physical memory requires the Lock Pages in Memory privilege discussed in the Memory allocators section.</sub>
 
 # Memory allocators
 Memory allocators are application components that manage how it allocates and deallocates its data in RAM.
