@@ -43,7 +43,7 @@ Only the recommended parameters for general use & optimal performance will be li
 	* Enables the ability to switch between different memory allocators. mimalloc is *highly* recommended for this, otherwise disable unless experimenting with the already provided memory allocators.
 * Enabled Large-page Support
 	* Recommended to enable for additional performance. This is an alternative memory management technique that uses larger memory blocks than the default (4KB) page size.  
-	<sub>mimalloc will always attempt to use Large-pages regardless of the state of this parameter.</sub>
+	<sub>Please note that your Windows profile may not have the required privileges to use Large-pages even if this parameter is enabled, as they are kept in physical memory. Keeping data in physical memory requires the Lock Pages in Memory privilege discussed in the Memory allocator section.</sub>
 
 # Memory allocators
 Memory allocators are application components that manage how it allocates and deallocates its data in RAM.
@@ -74,10 +74,10 @@ mimalloc is available at John Gold King's GitHub page, which can be found [here]
 
 * To download the latest, or previous versions of mimalloc, look for the "Assets" section found at the bottom of each release, then download the **.dll** file contained within it. Downloading the Source code (zip) and (tar.gz) is not necessary.
 
-### Taking full advantage of mimalloc
-John Gold King's mimalloc supports the "Lock Pages in Memory" (LPIM) feature which prevents Windows from shifting Arma 3's application data into virtual memory. This can increase in-game performance, as virtual memory is considerably slower than physical memory (RAM).
+## Taking full advantage of memory allocators
+Arma 3 supports Large-pages, which is a feature that requires Lock Pages in Memory (LPIM) privileges. This prevents Windows from shifting Arma 3's application data into virtual memory. Enabling privileges for this can increase in-game performance, as virtual memory is significantly slower than physical memory (RAM).
 
-**Enabling Lock Pages in Memory:**
+### Enabling Lock Pages in Memory:
 
 Please note that a **Professional, Enterprise or Education** edition of Windows is required to access the LPIM feature.
 
