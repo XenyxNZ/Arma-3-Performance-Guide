@@ -2,7 +2,7 @@
 
 ### Why it's not great
 
-Arma 3 is built on Bohemia's Real Virtuality engine, which is heavily constrained by the CPU and RAM. Contrary to popular belief, the game does actually utilize multithreading, and has since release - however this system can still cause severe performance bottlenecks in critical aspects due to its design. This is why even the most modern, high-end systems sometimes struggle to run Arma 3 at high frame rates 10+ years after its release.
+Arma 3 is built on Bohemia's Real Virtuality engine, and contrary to popular belief, it does actually utilize multithreading for many things. However it still suffers from severe performance bottlenecks in critical aspects due to limitations in its design. This is why even the most modern, high-end systems sometimes struggle to run Arma 3 at high frame rates 10+ years after its release.
 
 ### How it can be better
 
@@ -21,7 +21,7 @@ As mentioned above, an AMD CPU with 3D V-Cache is *highly* recommended for your 
 
 * For older systems using DDR4, a kit of RAM running at 3600 MT/s with a CAS latency (CL) of 16 or lower is recommended.
 
-# Game Launcher
+# Game launcher
 The game launcher has a parameters section where you can configure which system features & resources the game can make use of.
 
 ### Getting to the parameters
@@ -45,7 +45,7 @@ Only the recommended parameters for general use & optimal performance will be li
 	* Recommended to enable for additional performance. This is an alternative memory management technique that uses larger memory blocks than the default (4KB) page size.  
 	<sub>mimalloc will always attempt to use Large-pages regardless of the state of this parameter.</sub>
 
-# Memory Allocators
+# Memory allocators
 Memory allocators are application components that manage how it allocates and deallocates its data in RAM.
 
 ## Installing & using a memory allocator
@@ -119,7 +119,7 @@ There are two methods for switching to the profiling build:
 	* Visit the Bohemia forum thread found [here](https://forums.bohemia.net/forums/topic/160288-arma-3-stable-server-218-profiling-performance-binary-feedback/), then follow the steps to download and replace the game executables.  
 	<sub>This method can also be used for reverting to previous profiling builds if bugs are occurring on the latest one.</sup>
 
-# Graphical Settings
+# Graphical settings
 
 In-game graphics settings won't be explained in too much depth, as the performance optimisation [wiki page](https://community.bistudio.com/wiki/Arma_3:_Performance_Optimisation) covers all of the settings and what impact they have on performance, as well as which components they are most taxing on.
 
