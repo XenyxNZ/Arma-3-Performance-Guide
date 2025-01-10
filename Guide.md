@@ -152,7 +152,7 @@ In-game graphics settings won't be explained in too much depth, as the performan
 
 # Yet Another Arma Benchmark (YAAB)
 YAAB is a widely used Arma 3 performance benchmarking scenario made by Sams.  
-It is ideal for measuring differences in performance while experimenting with graphical settings, memory allocators, profiling builds, etc.
+It is ideal for measuring differences in performance while experimenting with overclocking, graphical settings, memory allocators, profiling builds, etc.
 
 ## Downloading and using YAAB
 
