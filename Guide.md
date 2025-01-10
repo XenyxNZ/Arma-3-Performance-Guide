@@ -130,6 +130,7 @@ In-game graphics settings won't be explained in too much depth, as the performan
 	*  Generally recommended to keep this at the minimum of what you require for your gameplay.
 * Shadows & shadow distance (when on low/med settings).
 	* Highly recommended to disable shadows, as their FPS reduction is often significant.  
+ 	**It is important to also reduce shadow distance to the minimum value, as there is a bug which reduces FPS even if shadows are disabled.**  
 	<sub>If you wish to keep shadows enabled, counterintuitively setting them to high/ultra can sometimes yield more performance than low/medium, as this switches most of the shadow rendering computation to the GPU.</sub>
 
 **GPU taxing settings which contribute to the most FPS loss are:**
@@ -138,7 +139,8 @@ In-game graphics settings won't be explained in too much depth, as the performan
 * Sampling.
 	* Generally recommended to keep at 100%, setting this higher can result in lower FPS while barely improving visual quality.
 * Shadows & shadow distance (when on high/ultra settings).
-	* Highly recommended to disable shadows, as their FPS reduction is often significant.
+	* Highly recommended to disable shadows, as their FPS reduction is often significant.  
+	**It is important to also reduce shadow distance to the minimum value, as there is a bug which reduces FPS even if shadows are disabled.**
 * Particles.
 	* Generally recommended to set to Low, as various explosions and other particle effects can cause sudden FPS drops on higher settings.
 * AO.
