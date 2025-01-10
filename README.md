@@ -128,7 +128,7 @@ In-game graphics settings won't be explained in too much depth, as the performan
 	* Generally recommended to keep this at the minimum of what you require for your gameplay.
 * Object view distance.
 	*  Generally recommended to keep this at the minimum of what you require for your gameplay.
-* Shadows and shadow distance (when on low/med settings).
+* Shadows and shadow distance.
 	* Highly recommended to disable shadows, as their FPS reduction is often significant.  
  	**It is important to reduce shadow distance to the minimum value, as there is a bug which reduces FPS even if shadows are disabled.**  
 	<sub>If you wish to keep shadows enabled, counterintuitively setting them to high/ultra can sometimes yield more performance than low/medium, as this switches most of the shadow rendering computation to the GPU.</sub>
@@ -137,16 +137,14 @@ In-game graphics settings won't be explained in too much depth, as the performan
 
 <sup>Please note that some of these settings may appear to have little to no performance impact if the CPU or RAM are the primary bottleneck.</sup>
 * Sampling.
-	* Generally recommended to keep at 100%, setting this higher can result in lower FPS while barely improving visual quality.
-* Shadows and shadow distance (when on high/ultra settings).
-	* Highly recommended to disable shadows, as their FPS reduction is often significant.  
-	**It is important to reduce shadow distance to the minimum value, as there is a bug which reduces FPS even if shadows are disabled.**
+	* Highly recommended to keep at 100%, setting this higher can result in lower FPS while barely improving visual quality.  
+	<sub>Setting this lower than 100% can increase performance if the GPU is the major bottleneck, however it will often significantly degrade visual quality.</sub>
 * Particles.
 	* Generally recommended to set to Low, as various explosions and other particle effects can cause sudden FPS drops on higher settings.
 * AO.
 	* Generally recommended to disable, often incurs a slight but measurable performance impact when enabled.
 * FSAA.
-	* Generally recommended to set to 2x or 4x, going higher can greatly increase strain on the GPU.
+	* Recommended to set to 2x or 4x, going higher can greatly increase strain on the GPU.
 * PPAA.
 	* CMAA is highly recommended as it looks almost identical to SMAA, while being significantly less GPU intensive.
 
