@@ -27,8 +27,8 @@ The game launcher has a parameters section where you can configure which system 
 ### Getting to the parameters
 
 * Open the Arma 3 launcher.
-* Click on "Parameters" found on the left side.
-* Click on "All Parameters" found at the top of the parameters tab.
+* Navigate to the "Parameters" tab found on the left side.
+* At the top of the Parameters tab, click "All Parameters".
 
 ### Setting parameters
 Only the recommended parameters for general use and optimal performance will be listed.
@@ -42,13 +42,14 @@ Only the recommended parameters for general use and optimal performance will be 
 * Extra threads
 	* Recommended to leave disabled, as the game already knows to do this when detecting how many cores the CPU has.
 * Enable Hyper-Threading
-	* In most cases it is recommended to leave this disabled, as it can actually worsen performance slightly. However try benchmarking with it enabled to see if it does provide a performance benefit on your system.  
+	* In most cases it is recommended to leave this disabled, as it can worsen performance slightly. However try benchmarking with it enabled to see if it does provide a performance benefit on your system.  
 	<sub>Please note that Enable Hyper-Threading will be ignored when using the CPU count parameter.</sub>
 * Memory allocator (64-bit)
-	* Enables the ability to switch between different memory allocators. mimalloc is *highly* recommended for this, otherwise disable unless experimenting with the already provided memory allocators.
+	* Enables the ability to switch between different memory allocators. mimalloc is *highly* recommended, otherwise disable unless experimenting with the already provided memory allocators.  
+	<sub>mimalloc can be found within the Memory allocators section of this guide.</sub>
 * Enabled Large-page Support
 	* Recommended to enable for additional performance. This is an alternative memory management technique that uses larger memory blocks than the default (4KB) page size.  
-	<sub>Please note that your Windows profile may not have the required privileges to use Large-pages even if this parameter is enabled, as they are kept in physical memory. Keeping data in physical memory requires the Lock Pages in Memory privilege discussed in the Memory allocators section.</sub>
+	<sub>Please note that your Windows profile may not have the required privileges to use Large-pages even if this parameter is enabled, as they are kept in physical memory. Keeping data in physical memory requires the Lock Pages in Memory privilege discussed in the Memory allocators section of this guide.</sub>
 
 # Memory allocators
 Memory allocators are application components that manage how it allocates and deallocates its data in RAM.
@@ -72,7 +73,9 @@ Memory allocators are application components that manage how it allocates and de
 
 ## mimalloc
 mimalloc is a high performance memory allocator managed and maintained by Microsoft.  
-John Gold King has created a fork of it which is designed to be compatible with Arma 3.
+John Gold King has created a fork of it which is designed for use with Arma 3.  
+
+mimalloc is *highly* recommended, as performance gains can be very noticable when Large-pages and Lock Pages in Memory are configured.
 
 ### Downloading mimalloc
 mimalloc is available at John Gold King's GitHub page, which can be found [here](https://github.com/GoldJohnKing/mimalloc/releases).
@@ -136,7 +139,7 @@ In-game graphics settings won't be explained in too much depth, as the performan
 * Shadows and shadow distance.
 	* Highly recommended to disable shadows, as their FPS reduction is often significant.  
  	**It is important to reduce shadow distance to the minimum value, as there is a bug which reduces FPS even if shadows are disabled.**  
-	<sub>If you wish to keep shadows enabled, counterintuitively setting them to high/ultra can sometimes yield more performance than low/medium, as this switches most of the shadow rendering computation to the GPU.</sub>
+	<sub>If you wish to keep shadows enabled, setting it to Standard or higher can sometimes yield more performance than Low, as this shifts more of the rendering computation from the CPU to the GPU.</sub>
 
 ### GPU intensive settings
 
@@ -155,24 +158,24 @@ In-game graphics settings won't be explained in too much depth, as the performan
 
 # Yet Another Arma Benchmark (YAAB)
 YAAB is a widely used Arma 3 performance benchmarking scenario made by Sams.  
-It is ideal for measuring differences in performance while experimenting with overclocking, graphical settings, memory allocators, profiling builds, etc.
+It is very useful for measuring differences in performance while experimenting with overclocking, graphical settings, memory allocators and profiling builds, etc.
 
 ## Downloading and using YAAB
 
 ### Downloading YAAB
-Visit the Steam Workshop link [here](https://steamcommunity.com/sharedfiles/filedetails/?id=375092418) to subscribe to the scenario.
+Visit the Steam Workshop page [here](https://steamcommunity.com/sharedfiles/filedetails/?id=375092418) to subscribe to the scenario.
 
-Alternatively, you can navigate to the Workshop in your Steam client, then search for "YAAB" to subscribe to it through there.
+Alternatively, you can navigate to the Arma 3 Workshop in your Steam client, then search for "YAAB" to subscribe to it through there.
 
 ### Using YAAB
 * Start Arma 3.
 * Once in the main menu, highlight the "Singleplayer" button up the top left, then click "Scenarios" in the dropdown menu.
 * Double-click the "Yet Another Arma Benchmark" scenario found under the "Steam subscribed content" section.
-* The scenario will now load and automatically play through the benchmark scenes, providing performance results at the end.
+* The scenario will now load and automatically begin playing through the benchmark scenes, providing performance results at the end.
 
 ## Some things to note
 * Pressing "S" after the scenario has loaded will temporarily apply some standard preset graphics settings for the duration of the benchmark.
-* When benchmarking to compare different settings, it is generally recommended to keep your view distance relatively low (<2km). Higher view distances can quickly cause a CPU bottleneck, significantly lessening the measurable differences, which can make it more difficult to discern if your changes are having any affect on performance.
+* While benchmarking it is generally recommended to keep your view distance relatively low (<2km), as higher view distances can quickly cause a CPU bottleneck. This can make it difficult to discern if your changes are having any effect on performance.
 * To determine a proper average, it is recommended to run the benchmark 3-5 times.
 * Results can vary slightly without changing anything. This is due to the AI heavy nature of the benchmark, and Arma 3 being sensitive to fluctuating CPU and RAM resources.
 * For the most consistent results, it is recommended to close all other applications while benchmarking.
