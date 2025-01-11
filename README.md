@@ -176,5 +176,4 @@ Alternatively, you can navigate to the Workshop in your Steam client, then searc
 * To determine a proper average, it is recommended to run the benchmark 3-5 times.
 * Results can vary slightly without changing anything. This is due to the AI heavy nature of the benchmark, and Arma 3 being sensitive to fluctuating CPU and RAM resources.
 * For the most consistent results, it is recommended to close all other applications while benchmarking.
-* When comparing results with other people, it is highly recommended to make sure you are using identical graphics settings, memory allcators, parameters and builds of the game to isolate everything except differences in hardware.
 * Having mods enabled can affect benchmark results, even if they are not being used in the scenario.
