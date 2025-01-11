@@ -39,6 +39,8 @@ Only the recommended parameters for general use and optimal performance will be 
 	* Enable this to disable the splash screens during start up, allowing you to get into the game faster.
 * CPU count
 	* Only recommended for use if you wish to *limit* how many cores the game has access to, otherwise when unchecked the game will use all available physical cores.
+* Extra threads
+	* Recommended to leave disabled, as the game will already do this when detecting how many cores the CPU has.
 * Enable Hyper-Threading
 	* For most cases it is recommended to leave this disabled, as it can actually worsen performance. However try benchmarking with it enabled to see if it does provide a performance benefit on your system.  
 	<sub>Please note that Enable Hyper-Threading will be ignored when using the CPU count parameter.</sub>
