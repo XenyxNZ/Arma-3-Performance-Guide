@@ -38,7 +38,10 @@ Only the recommended parameters for general use and optimal performance will be 
 * Skip logos at startup
 	* Enable this to disable the splash screens during start up, allowing you to get into the game faster.
 * CPU count
-	* Only recommended for use if you wish to *limit* how many cores the game has access to, otherwise when unchecked the game will use all available physical and virtual cores.
+	* Only recommended for use if you wish to *limit* how many cores the game has access to, otherwise when unchecked the game will use all available physical cores.
+* Enable Hyper-Threading
+	* For most cases it is recommended to leave this disabled, as it can actually worsen performance. However try benchmarking with it enabled to see if it does provide a performance benefit on your system.  
+	<sub>Please note that Enable Hyper-Threading will be ignored when using the CPU count parameter.</sub>
 * Memory allocator (64-bit)
 	* Enables the ability to switch between different memory allocators. mimalloc is *highly* recommended for this, otherwise disable unless experimenting with the already provided memory allocators.
 * Enabled Large-page Support
