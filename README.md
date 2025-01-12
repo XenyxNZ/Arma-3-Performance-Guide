@@ -185,7 +185,7 @@ Alternatively, you can navigate to the Arma 3 Workshop in your Steam client, the
 # Frequently asked questions (FAQ)
 
 ### How much FPS can I expect to gain if I follow everything in this guide?
-It's truly impossible to estimate a specific value or range, as there are literally *dozens* of factors which affect FPS in Arma 3, ranging from your system hardware, missions and maps you play, mods you use, player count, AI count, asset count and so forth. The only trend I've observed when helping people with FPS prior to making this guide is that the more modern and high-end your hardware is, the more you gain from these tips.
+It's impossible to estimate a specific value or range, as there are literally *dozens* of factors which affect FPS in Arma 3, such as system hardware, missions, maps, mods, server player count, AI count, asset count and so forth. The only trend I've observed is that the more modern and high-end your hardware is, the more you gain from these tips.
 
 ### I did everything in this guide but my FPS barely improved, why?
 Without knowing specifics about your hardware, mods you use and missions you play, it's difficult to give an exact answer. However it's usually one of two things (or both) - either your hardware (or some part of it) is low-end or quite dated, or the missions you play / mods you use are very computationally demanding. Typically in these situations the only things you can do to notably improve FPS are upgrade your hardware or consider overclocking your existing hardware.
