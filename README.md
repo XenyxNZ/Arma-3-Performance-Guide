@@ -180,7 +180,7 @@ Alternatively, you can navigate to the Arma 3 Workshop in your Steam client, the
 * Results can vary slightly without changing anything. This is due to the AI heavy nature of the benchmark, and Arma 3 being sensitive to fluctuating CPU and RAM resources.
 * For the most consistent results, it is recommended to close all other applications while benchmarking.
 * Having mods enabled can affect benchmark results, even if they are not being used in the scenario.
-* If using an AMD CPU with 3D V-Cache technology, benchmark results may show little to no difference when overclocking or tuning RAM. It is suspected that this happens because the scenario doesn't generate enough highly performance-sensitive data to the point where some must remain in RAM.
+* If you're using an AMD CPU with 3D V-Cache, benchmark results may show little to no difference when overclocking or tuning RAM. I suspect this happens because YAAB doesn't generate enough performance-sensitive data to fully saturate the cache to the point of needing to store excess in RAM.
 
 # Frequently asked questions (FAQ)
 
