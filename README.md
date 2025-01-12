@@ -180,3 +180,14 @@ Alternatively, you can navigate to the Arma 3 Workshop in your Steam client, the
 * Results can vary slightly without changing anything. This is due to the AI heavy nature of the benchmark, and Arma 3 being sensitive to fluctuating CPU and RAM resources.
 * For the most consistent results, it is recommended to close all other applications while benchmarking.
 * Having mods enabled can affect benchmark results, even if they are not being used in the scenario.
+
+# Frequently asked questions (FAQ)
+
+### How much FPS can I expect to gain if I follow everything in this guide?
+It's truly impossible to estimate a specific value or range, as there are literally *dozens* of factors which affect FPS in Arma 3, ranging from your system hardware, missions and maps you play, mods you use, player count, AI count, asset count and soforth. The only observed trend I've noticed when helping people with FPS prior to making this guide is the more modern and high-end your hardware is, the more you gain from these tips.
+
+### I did everything in this guide and my FPS barely improved, why?
+Without knowing specifics about your hardware and missions you play, it's difficult to give an exact answer. However it's usually one of two things (or both) - either your hardware (or some part of it) is low-end or quite dated, or the missions you play are very computationally demanding. Typically in these situations the only thing you can do to notibly improve FPS is upgrade your hardware or consider overclocking your existing hardware.
+
+### Why am I getting a "Blocked loading of file" error when trying to use mimalloc?
+Sometimes this happens for newly released versions of mimalloc as there is a BattlEye whitelisting process to make sure the .dll is safe for use. Until the .dll has been whitelisted by BattlEye, it will prevent usage of it. This can sometimes take up to a few days, but it's usually pretty quick.
