@@ -75,7 +75,7 @@ Memory allocators are application components that manage how it allocates and de
 mimalloc is a high performance memory allocator managed and maintained by Microsoft.  
 John Gold King has created a fork of it which is designed for use with Arma 3.  
 
-mimalloc is *highly* recommended, as performance gains can be very noticable when Lock Pages in Memory is enabled.
+mimalloc is *highly* recommended, as performance gains can be very noticeable when Lock Pages in Memory is enabled.
 
 ### Downloading mimalloc
 mimalloc is available at John Gold King's GitHub page, which can be found [here](https://github.com/GoldJohnKing/mimalloc/releases).
