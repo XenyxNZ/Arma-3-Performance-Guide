@@ -22,7 +22,8 @@ As mentioned above, an AMD CPU with 3D V-Cache is *highly* recommended for your 
 * For older systems using DDR4, a kit of RAM running at 3600 MT/s with a CAS latency (CL) of 16 or lower is recommended.
 
 # Parameters
-Arma 3 supports launch parameters, which are configurable options that instruct the game to make use of various system features and resources.  
+Arma 3 supports launch parameters, which are configurable options that instruct the game to make use of various system features and resources.
+
 Only the recommended parameters for general use and optimal performance will be listed.
 
 ## Game launcher
@@ -38,7 +39,7 @@ Only the recommended parameters for general use and optimal performance will be 
 * Skip logos at startup
 	* Enable this to disable the splash screens during start up, allowing you to get into the game faster.
 * Parameter file
-	* Enables the ability to read parameters from a **.txt** file. Essential for the **Parameters file** section of this guide, otherwise leave disabled.
+	* Enables the ability to read parameters from a text file. Essential for the **Parameters file** section of this guide, otherwise leave disabled.
 * CPU count
 	* Only recommended for use if you wish to *limit* how many cores the game has access to, otherwise when unchecked the game will use all available physical cores.
 * Extra threads
@@ -48,31 +49,32 @@ Only the recommended parameters for general use and optimal performance will be 
 	<sub>Please note that Enable Hyper-Threading will be ignored when using the CPU count parameter.</sub>
 * Memory allocator (64-bit)
 	* Enables the ability to switch between different memory allocators. mimalloc is *highly* recommended, otherwise disable unless experimenting with the already provided memory allocators.  
-	<sub>mimalloc can be found within the Memory allocators section of this guide.</sub>
+	<sub>mimalloc can be found within the **Memory allocators** section of this guide.</sub>
 * Enabled Large-page Support
 	* Recommended to enable for additional performance. This is an alternative memory management technique that uses larger memory blocks than the default (4KB) page size.  
-	<sub>Please note that your Windows profile may not have the required privileges to use Large-pages even if this parameter is enabled, as they are kept in physical memory. Keeping data in physical memory requires the Lock Pages in Memory privilege discussed in the Memory allocators section of this guide.</sub>
+	<sub>Please note that your Windows profile may not have the required privileges to use Large-pages even if this parameter is enabled, as they are kept in physical memory. Keeping data in physical memory requires the Lock Pages in Memory privilege discussed in the **Memory allocators** section of this guide.</sub>
 
 ## Parameters file
-It is also recommended to use a text file for enabling parameters not available in the game's launcher.
+Several supported parameters are not listed in the game launcher. Using a parameters file is the recommended method for enabling and configuring them.
 
 ### How to use a parameters file
-* Download the "parameters.txt" file found in the repository this guide.
+* Download the "parameters.txt" file found in the repository of this guide.
 * Right-click Arma 3 in your Steam library list, highlight "Manage", then click "Browse local files".
 * Place the downloaded "parameters.txt" file into the game's install directory.
 * In the parameters section of the game launcher, enable the "Parameter file" parameter.
 * Press the "..." button to the right of the checkbox, then select the "parameters.txt" file.
 
 If you do not wish to use the provided parameters file, you can read how to create and format one [here](https://community.bistudio.com/wiki/Startup_Parameters_Config_File).  
-A list of all available parameters can be found [here](https://community.bistudio.com/wiki/Arma_3:_Startup_Parameters).  
+A list of all available parameters can be found [here](https://community.bistudio.com/wiki/Arma_3:_Startup_Parameters).
 
 ### Which parameters to set
-These parameters have already been set if using the provided parameters file.
+Please note these parameters have already been set if using the provided parameters file.
 
 * setThreadCharacteristics
-	* This registers the game's executable as a "Game" in Windows for additional performance.
+	* This registers the game's executable as a "Game" in Windows for additional performance.  
+	<sup>Do **NOT** use this parameter if you are using Windows Server as your operating system, as it can freeze the entire operating system.</sup>
 * maxFileCacheSize
-	* This sets the default filecache size (in MB) to be used for gamedata loaded from disk. Performance from this is likely negligible, however in certain situations it may help.  
+	* Sets the default filecache size (in MB) to be used for gamedata loaded from disk. Performance from this is likely negligible, however in certain situations it may help.  
 	<sub>If using the provided parameters file, a size of 12GB has been set. However feel free to increase or decrease this based on how much RAM your system has.</sub>
 
 # Memory allocators
