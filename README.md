@@ -74,8 +74,8 @@ Please note these parameters have already been set if using the provided paramet
 	* This registers the game's executable as a "Game" in Windows for additional performance.  
 	<sup>Do **NOT** use this parameter if you are using Windows Server as your operating system, as it can freeze the entire operating system.</sup>
 * maxFileCacheSize
-	* Sets the default filecache size (in MB) to be used for gamedata loaded from disk. Performance from this is likely negligible, however in certain situations it may help.  
-	<sub>If using the provided parameters file, a size of 12GB has been set. However feel free to increase or decrease this based on how much RAM your system has.</sub>
+	* Sets the maximum filecache size (in MB) to be used for caching gamedata loaded from disk. Performance gains from this are likely negligible, however in certain situations it may help.  
+	<sup>If using the provided parameters file, a maximum of 12GB has been set. This should be more than enough, as the default maximum is 2GB.</sup>
 
 # Memory allocators
 Memory allocators are application components that manage how it allocates and deallocates its data in RAM.
