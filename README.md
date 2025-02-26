@@ -4,22 +4,29 @@
 
 Arma 3 is built on Bohemia's Real Virtuality engine, and contrary to popular belief, it does actually utilize multithreading for many things. However it still suffers from severe performance bottlenecks in critical aspects due to limitations in its design. This is why even the most modern, high-end systems sometimes struggle to run Arma 3 at high frame rates 10+ years after its release.
 
-### How it can be better
-
-Arma 3 is very responsive to CPU core performance, cache performance and size, as well as RAM bandwidth and latency. Nowadays it is possible to get very good out-of-the-box frame rates using a CPU which utilizes AMD's 3D V-Cache technology - these CPUs have significantly more on-board memory (cache), which the game uses to store frequently accessed data. CPU cache has significantly higher bandwidths than RAM, and the access latency is several times lower. Traditional overclocking techniques can still greatly improve performance, especially on Intel systems and AMD systems without 3D V-Cache. Overclocking the CPU and RAM on systems utilizing 3D V-Cache can still reap notable performance gains, however it is not necessary for good performance as the baseline frame rate is considerably higher.
 
 ## Choice of hardware
 
 **CPU**
 
-As mentioned above, an AMD CPU with 3D V-Cache is *highly* recommended for your next PC build, or upgrade. These CPUs not only improve performance in Arma 3, but also almost every other game. Even if you are on an older AM4 socket system, you can still reap the benefits of this technology with a 5800X3D, 5700X3D or 5600X3D.
+Arma 3 is very responsive to CPU core performance, as well as cache size. Nowadays it is possible to get very good out-of-the-box frame rates using a CPU which utilizes AMD's 3D V-Cache technology - these CPUs have significantly more on-board memory (cache), which is used to store frequently accessed data. The more cache memory a CPU has, the more performance-sensitive data can be stored in it, as opposed to fetching it from RAM, which is significantly slower by comparison. 
+
+As mentioned above, an AMD CPU with 3D V-Cache is *highly* recommended for your next PC build, or upgrade. These CPUs not only greatly improve performance in Arma 3, but also almost every other game. Even if you are on an older AM4 socket system, you can still reap the benefits of this technology with a 5800X3D, 5700X3D or 5600X3D.
 
 **RAM**
+
+Just like CPUs, Arma 3 is very responsive to RAM performance. Only a comparatively small amount of data can be stored in CPU cache, so having a kit of RAM which is both high frequency and low latency is important to ensure data is fetched as quickly as possible. 
 
 * For modern systems using DDR5, a kit of RAM running at 6000 MT/s with a CAS latency (CL) of 30 or lower is recommended.  
 <sub>Intel systems are able to utilize much higher memory speeds than 6000 MT/s, however as of writing this, the ability to stably run speeds beyond ~6800 MT/s is extremely dependent on the motherboard and quality of the CPU's integrated memory controller (IMC).</sub>
 
 * For older systems using DDR4, a kit of RAM running at 3600 MT/s with a CAS latency (CL) of 16 or lower is recommended.
+
+**Overclocking**
+
+Because Arma 3 is so responsive to CPU and RAM performance, overclocking and tuning these components can have very noticeable performance gains. 
+
+Guides for overclocking won't be covered here, as they would require significant amounts of explanation. However if you're interested, I suggest researching and learning how to tune RAM timings, as these greatly affect performance in Arma 3 with no inherent risk of damaging or shortening the lifespan of components.
 
 # Parameters
 Arma 3 supports launch parameters, which are configurable options that instruct the game to make use of various system features and resources.
@@ -45,7 +52,7 @@ Only the recommended parameters for general use and optimal performance will be 
 * Extra threads
 	* Recommended to leave disabled, as the game already knows to do this when detecting how many cores the CPU has.
 * Enable Hyper-Threading
-	* In most cases it is recommended to leave this disabled, as it can worsen performance slightly. However try benchmarking with it enabled to see if it does provide a performance benefit on your system.  
+	* Generally it is recommended to enable this for older systems with dated / less powerful CPUs. However, if you are on a modern CPU (Intel 12th gen / AMD Ryzen 7000 series or newer), you should typically disable this as it can worsen performance slightly. I suggest YAAB benchmarking with it enabled to see if it does provide a performance benefit on your system.  
 	<sub>Please note that Enable Hyper-Threading will be ignored when using the CPU count parameter.</sub>
 * Memory allocator (64-bit)
 	* Enables the ability to switch between different memory allocators. mimalloc is *highly* recommended, otherwise disable unless experimenting with the already provided memory allocators.  
