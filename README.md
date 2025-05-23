@@ -167,7 +167,7 @@ There are two methods for switching to the profiling build:
 
 # Graphical settings
 
-In-game graphics settings won't be explained in too much depth, as the performance optimisation [wiki page](https://community.bistudio.com/wiki/Arma_3:_Performance_Optimisation) covers all of the settings and what impact they have on performance, as well as which components they are most taxing on.
+In-game graphical settings won't be explained in too much depth, as the performance optimisation [wiki page](https://community.bistudio.com/wiki/Arma_3:_Performance_Optimisation) covers all of the settings and what impact they have on performance, as well as which components they are most taxing on.
 
 ### CPU intensive settings
 * View distance.
@@ -195,13 +195,12 @@ In-game graphics settings won't be explained in too much depth, as the performan
 	* CMAA is highly recommended as it looks almost identical to SMAA, while being significantly less GPU intensive.
 
 # Yet Another Arma Benchmark (YAAB)
-YAAB is a widely used Arma 3 performance benchmarking scenario made by Sams.  
-It is very useful for measuring differences in performance while experimenting with overclocking, graphical settings, memory allocators and profiling builds, etc.
+YAAB is a widely used Arma 3 performance benchmarking scenario made by Sams. It is ideal for measuring differences in performance while experimenting with parameters, overclocking, graphical settings, memory allocators and profiling builds, etc.
 
 ## Downloading and using YAAB
 
 ### Downloading YAAB
-Visit the Steam Workshop page [here](https://steamcommunity.com/sharedfiles/filedetails/?id=375092418) to subscribe to the scenario.
+Visit Sams' Steam Workshop page [here](https://steamcommunity.com/sharedfiles/filedetails/?id=375092418) to subscribe to the scenario.
 
 Alternatively, you can navigate to the Arma 3 Workshop in your Steam client, then search for "YAAB" to subscribe to it through there.
 
