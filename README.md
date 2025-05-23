@@ -23,7 +23,7 @@ Just like CPUs, Arma 3 is very responsive to RAM performance. Only a comparative
 
 **GPU**
 
-At the time of writing this, Arma 3 has a performance bias towards NVIDIA GPUs for reasons unknown to me (other Bohemia titles such as DayZ also exhibit this). This means an AMD GPU which should be the same performance as a competing NVIDIA GPU would actually perform noticeably worse in GPU bound scenarios. Because of this I'd typically recommend an NVIDIA GPU if you want the absolute best performance, though it's not overly important as GPUs are not the bottleneck in the majority of gameplay scenarios.
+At the time of writing this, Arma 3 has a performance bias towards NVIDIA GPUs for reasons unknown to me (other Bohemia titles such as DayZ also exhibit this). This means an AMD GPU which should be the same performance as a competing NVIDIA GPU would perform noticeably worse in GPU bound scenarios. Because of this I'd typically recommend an NVIDIA GPU if you want the absolute best performance, though it's not overly important as GPUs are not the bottleneck in the majority of gameplay scenarios.
 
 # Parameters
 Arma 3 supports launch parameters, which are configurable options that instruct the game to make use of various features and resources.
@@ -61,14 +61,14 @@ Several supported parameters are not listed in the game launcher. Using Steam's 
 
 ### How to find and use Steam's launch options feature
 * Right-click Arma 3 in your Steam library list, then click "Properties...".
-* Under the General tab will be a "Launch Options" section with a text box below it, this is where you will write the parameters you want to use.
+* Under the General tab will be a "Launch Options" section with a text box below it, this is where you put the parameters you want to use.
   
 A list of all available parameters can be found [here](https://community.bistudio.com/wiki/Arma_3:_Startup_Parameters).
 
 ### Which parameters to set 
 Optionally, you can copy the below prewritten parameters and paste them as is:  
 ```
--maxFileCacheSize=12288 -setThreadCharacteristics
+-setThreadCharacteristics -maxFileCacheSize=12288
 ```
 
 * -setThreadCharacteristics
@@ -79,7 +79,7 @@ Optionally, you can copy the below prewritten parameters and paste them as is:
 	<sup>A value between 6144-12288 (6-12GB) should be more than enough, as the default is 2048 (2GB).</sup>
 
 ### Advanced parameters
-I strongly recommend **not** using these parameters unless you already understand whether or not the architectural features of your CPU would benefit from them, as they have the potential to worsen your performance unless properly understood.  
+I strongly recommend **not** using these parameters unless you already understand whether or not the architectural features of your CPU can benefit from them, as they have the potential to worsen performance unless properly understood.  
 
 **Please note that these parameters are currently only supported on Profiling build V32 or later.**
 
