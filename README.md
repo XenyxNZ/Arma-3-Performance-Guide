@@ -18,18 +18,15 @@ As mentioned above, an AMD CPU with 3D V-Cache is *highly* recommended for your 
 Just like CPUs, Arma 3 is very responsive to RAM performance. Only a comparatively small amount of data can be stored in CPU cache, so having a kit of RAM which is both high frequency and low latency is important to ensure data is fetched as quickly as possible. 
 
 * For modern systems using DDR5, a kit of RAM running at 6000 MT/s with a CAS latency (CL) of 30 or lower is recommended.  
-<sub>Intel systems are able to utilize much higher memory speeds than 6000 MT/s, however as of writing this, the ability to stably run speeds beyond ~6800 MT/s is extremely dependent on the motherboard and quality of the CPU's integrated memory controller (IMC).</sub>
 
 * For older systems using DDR4, a kit of RAM running at 3600 MT/s with a CAS latency (CL) of 16 or lower is recommended.
 
-**Overclocking**
+**GPU**
 
-Because Arma 3 is so responsive to CPU and RAM performance, overclocking and tuning these components can have very noticeable performance gains. 
-
-Guides for overclocking won't be covered here, as they would require significant amounts of explanation. However if you're interested, I suggest researching and learning how to tune RAM timings, as these greatly affect performance in Arma 3 with no inherent risk of damaging or shortening the lifespan of components.
+At the time of writing this, Arma 3 has a performance bias towards NVIDIA GPUs, most likely due to different levels of support, or bugs (other Bohemia titles such as DayZ also exhibit this). So for instance, an AMD GPU which should be the same performance as a competing NVIDIA GPU would actually perform noticeably worse in GPU bound scenarios. Because of this I'd typically recommend an NVIDIA GPU if you want the absolute best performance, though it's not overly important as GPUs are not the bottleneck in the majority of gameplay scenarios.
 
 # Parameters
-Arma 3 supports launch parameters, which are configurable options that instruct the game to make use of various system features and resources.
+Arma 3 supports launch parameters, which are configurable options that instruct the game to make use of various features and resources.
 
 Only the recommended parameters for general use and optimal performance will be listed.
 
@@ -45,8 +42,6 @@ Only the recommended parameters for general use and optimal performance will be 
 	* Enable this to prevent the game from loading the world for display in the background, unnecessarily consuming resources.
 * Skip logos at startup
 	* Enable this to disable the splash screens during start up, allowing you to get into the game faster.
-* Parameter file
-	* Enables the ability to read parameters from a text file. Essential for the **Parameters file** section of this guide, otherwise leave disabled.
 * CPU count
 	* Only recommended for use if you wish to *limit* how many cores the game has access to, otherwise when unchecked the game will use all available physical cores.
 * Extra threads
@@ -61,31 +56,37 @@ Only the recommended parameters for general use and optimal performance will be 
 	* Recommended to enable for additional performance. This is an alternative memory management technique that uses larger memory blocks than the default (4KB) page size.  
 	<sub>Please note that your Windows profile may not have the required privileges to use Large-pages even if this parameter is enabled, as they are kept in physical memory. Keeping data in physical memory requires the Lock Pages in Memory privilege discussed in the **Memory allocators** section of this guide.</sub>
 
-## Parameters file
-Several supported parameters are not listed in the game launcher. Using a parameters file is the recommended method for enabling and configuring them.
+## Steam launch options
+Several supported parameters are not listed in the game launcher. Using Steam's launch options is the recommended method for enabling them, as some of the following parameters do not work from a parameters file.
 
-### How to use a parameters file
-* Download the "parameters.txt" file found in the repository of this guide.
-* Right-click Arma 3 in your Steam library list, highlight "Manage", then click "Browse local files".
-* Place the downloaded "parameters.txt" file into the game's install directory.
-* In the parameters section of the game launcher, enable the "Parameter file" parameter.
-* Press the "..." button to the right of the checkbox, then select the "parameters.txt" file.
-
-If you do not wish to use the provided parameters file, you can read how to create and format one [here](https://community.bistudio.com/wiki/Startup_Parameters_Config_File).  
+### How to find and use Steam's launch options feature
+* Right-click Arma 3 in your Steam library list, then click "Properties...".
+* Under the General tab will be a "Launch Options" section with a text box below it, this is where you will write the parameters you want to use.
+  
 A list of all available parameters can be found [here](https://community.bistudio.com/wiki/Arma_3:_Startup_Parameters).
 
-### Which parameters to set
-Please note these parameters have already been set if using the provided parameters file.
+### Which performance related parameters to set 
+Optionally, you can copy these prewritten parameters and paste them as is: `-maxFileCacheSize=12288 -setThreadCharacteristics`
 
-* setThreadCharacteristics
+* -setThreadCharacteristics
 	* This registers the game's executable as a "Game" in Windows for additional performance.  
 	<sup>Do **NOT** use this parameter if you are using Windows Server as your operating system, as it can freeze the entire operating system.</sup>
-* maxFileCacheSize
+* -maxFileCacheSize
 	* Sets the maximum filecache size (in MB) to be used for caching gamedata loaded from disk. Performance gains from this are likely negligible, however in certain situations it may help.  
-	<sup>If using the provided parameters file, a maximum of 12GB has been set. This should be more than enough, as the default maximum is 2GB.</sup>
+	<sup>A value between 6144-12288 (6-12GB) should be more than enough, as the default is 2048 (2GB).</sup>
+
+### Advanced parameters
+I strongly recommend **not** using these parameters unless you already understand whether or not the architectural features of your CPU would benefit from them, as they have the potential to worsen your performance unless properly understood.  
+**Please note that these parameters are currently only supported on Profiling build V32 or later.**
+
+* -cpuAffinity
+	* Tells the game which specific CPU cores it is allowed to use via a bitmask value.  
+	<sup>This can be useful for CPUs with multiple CCDs, or P and E cores.</sup>
+* -cpuMainThreadAffinity
+	* Tells the game which specific CPU core to use for the game's main thread, via a bitmask value.
 
 # Memory allocators
-Memory allocators are application components that manage how it allocates and deallocates its data in RAM.
+Memory allocators are components that manage how an application allocates and deallocates its data in RAM.
 
 ## Installing and using a memory allocator
 
