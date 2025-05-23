@@ -1,2 +1,0 @@
--maxFileCacheSize=12288
--setThreadCharacteristics
