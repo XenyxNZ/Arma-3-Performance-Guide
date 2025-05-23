@@ -67,7 +67,9 @@ A list of all available parameters can be found [here](https://community.bistudi
 
 ### Which parameters to set 
 Optionally, you can copy the below prewritten parameters and paste them as is:  
-`-maxFileCacheSize=12288 -setThreadCharacteristics`
+```
+-maxFileCacheSize=12288 -setThreadCharacteristics
+```
 
 * -setThreadCharacteristics
 	* This registers the game's executable as a "Game" in Windows for additional performance.  
