@@ -23,7 +23,7 @@ Just like CPUs, Arma 3 is very responsive to RAM performance. Only a comparative
 
 **GPU**
 
-At the time of writing this, Arma 3 has a performance bias towards NVIDIA GPUs, most likely due to different levels of support, or bugs (other Bohemia titles such as DayZ also exhibit this). So for instance, an AMD GPU which should be the same performance as a competing NVIDIA GPU would actually perform noticeably worse in GPU bound scenarios. Because of this I'd typically recommend an NVIDIA GPU if you want the absolute best performance, though it's not overly important as GPUs are not the bottleneck in the majority of gameplay scenarios.
+At the time of writing this, Arma 3 has a performance bias towards NVIDIA GPUs for reasons unknown to me (other Bohemia titles such as DayZ also exhibit this). This means an AMD GPU which should be the same performance as a competing NVIDIA GPU would actually perform noticeably worse in GPU bound scenarios. Because of this I'd typically recommend an NVIDIA GPU if you want the absolute best performance, though it's not overly important as GPUs are not the bottleneck in the majority of gameplay scenarios.
 
 # Parameters
 Arma 3 supports launch parameters, which are configurable options that instruct the game to make use of various features and resources.
