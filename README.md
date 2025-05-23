@@ -65,8 +65,9 @@ Several supported parameters are not listed in the game launcher. Using Steam's 
   
 A list of all available parameters can be found [here](https://community.bistudio.com/wiki/Arma_3:_Startup_Parameters).
 
-### Which performance related parameters to set 
-Optionally, you can copy these prewritten parameters and paste them as is: `-maxFileCacheSize=12288 -setThreadCharacteristics`
+### Which parameters to set 
+Optionally, you can copy the below prewritten parameters and paste them as is:  
+`-maxFileCacheSize=12288 -setThreadCharacteristics`
 
 * -setThreadCharacteristics
 	* This registers the game's executable as a "Game" in Windows for additional performance.  
@@ -77,10 +78,11 @@ Optionally, you can copy these prewritten parameters and paste them as is: `-max
 
 ### Advanced parameters
 I strongly recommend **not** using these parameters unless you already understand whether or not the architectural features of your CPU would benefit from them, as they have the potential to worsen your performance unless properly understood.  
+
 **Please note that these parameters are currently only supported on Profiling build V32 or later.**
 
 * -cpuAffinity
-	* Tells the game which specific CPU cores it is allowed to use via a bitmask value.  
+	* Tells the game which specific CPU cores to use, via a bitmask value.  
 	<sup>This can be useful for CPUs with multiple CCDs, or P and E cores.</sup>
 * -cpuMainThreadAffinity
 	* Tells the game which specific CPU core to use for the game's main thread, via a bitmask value.
