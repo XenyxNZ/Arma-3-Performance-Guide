@@ -2,14 +2,14 @@
 
 ### Why it's not great
 
-Arma 3 is built on Bohemia's Real Virtuality engine, and contrary to popular belief, it does actually utilize multithreading for many things. However it still suffers from severe performance bottlenecks in critical aspects due to limitations in its design. This is why even the most modern, high-end systems sometimes struggle to run Arma 3 at high frame rates 10+ years after its release.
+Arma 3 is built on Bohemia's Real Virtuality engine, and contrary to popular belief, it does utilize multithreading for many things. However, it still suffers from severe performance bottlenecks in critical aspects due to limitations in its design. This is why even the most modern, high-end systems can still struggle to run Arma 3 at high frame rates 10+ years after its release.
 
 
 ## Choice of hardware
 
 **CPU**
 
-Arma 3 is very responsive to CPU core performance, as well as cache size. Nowadays it is possible to get very good out-of-the-box frame rates using a CPU which utilizes AMD's 3D V-Cache technology - these CPUs have significantly more on-board memory (cache), which is used to store frequently accessed data. The more cache memory a CPU has, the more performance-sensitive data can be stored in it, as opposed to fetching it from RAM, which is significantly slower by comparison. 
+Arma 3 is very responsive to CPU core performance, as well as cache size. Nowadays it's possible to get very good out-of-the-box frame rates using a CPU which utilizes AMD's 3D V-Cache technology - these CPUs have significantly more on-board memory (cache), which is used to store frequently accessed data. The more cache memory a CPU has, the more performance-sensitive data can be stored in it, as opposed to fetching it from RAM, which is significantly slower by comparison. 
 
 As mentioned above, an AMD CPU with 3D V-Cache is *highly* recommended for your next PC build, or upgrade. These CPUs not only greatly improve performance in Arma 3, but also almost every other game. Even if you are on an older AM4 socket system, you can still reap the benefits of this technology with a 5800X3D, 5700X3D or 5600X3D.
 
@@ -41,20 +41,20 @@ Only the recommended parameters for general use and optimal performance will be 
 * Show static background in menu
 	* Enable this to prevent the game from loading the world for display in the background, unnecessarily consuming resources.
 * Skip logos at startup
-	* Enable this to disable the splash screens during start up, allowing you to get into the game faster.
+	* Enable this to disable the splash screens during start up, allowing you to get into the game slightly faster.
 * CPU count
 	* Only recommended for use if you wish to *limit* how many cores the game has access to, otherwise when unchecked the game will use all available physical cores.
 * Extra threads
 	* Recommended to leave disabled, as the game already knows to do this when detecting how many cores the CPU has.
 * Enable Hyper-Threading
-	* Generally it is recommended to enable this for older systems with dated / less powerful CPUs. However, if you are on a modern CPU (Intel 12th gen / AMD Ryzen 7000 series or newer), you should typically disable this as it can worsen performance slightly. I suggest YAAB benchmarking with it enabled to see if it does provide a performance benefit on your system.  
+	* Generally it is recommended to enable this. However, if you're on a modern CPU with 8 or more cores, disabling Hyper-Threading can sometimes yield slightly more performance. Try YAAB benchmarking with it disabled to see if it does provide a performance benefit on your system.  
 	<sub>Please note that Enable Hyper-Threading will be ignored when using the CPU count parameter.</sub>
 * Memory allocator (64-bit)
-	* Enables the ability to switch between different memory allocators. mimalloc is *highly* recommended, otherwise disable unless experimenting with the already provided memory allocators.  
+	* Enables the ability to switch between different memory allocators. mimalloc is *highly* recommended, otherwise leave disabled unless experimenting with the already provided memory allocators.  
 	<sub>mimalloc can be found within the **Memory allocators** section of this guide.</sub>
 * Enabled Large-page Support
 	* Recommended to enable for additional performance. This is an alternative memory management technique that uses larger memory blocks than the default (4KB) page size.  
-	<sub>Please note that your Windows profile may not have the required privileges to use Large-pages even if this parameter is enabled, as they are kept in physical memory. Keeping data in physical memory requires the Lock Pages in Memory privilege discussed in the **Memory allocators** section of this guide.</sub>
+	<sub>Please note that by default your Windows profile won't have the required privileges to use Large-pages even if you enable this parameter. For programs to use Large-pages, Lock Pages in Memory needs to be configured in the Group Policy Editor, which is discussed in the **Memory allocators** section of this guide.</sub>
 
 ## Steam launch options
 Several supported parameters are not listed in the game launcher. Using Steam's launch options is the recommended method for enabling them, as some of the following parameters do not work from a parameters file.
@@ -76,12 +76,10 @@ Optionally, you can copy the below prewritten parameters and paste them as is:
 	<sup>Do **NOT** use this parameter if you are using Windows Server as your operating system, as it can freeze the entire operating system.</sup>
 * -maxFileCacheSize
 	* Sets the maximum filecache size (in MB) to be used for caching gamedata loaded from disk. Performance gains from this are likely negligible, however in certain situations it may help.  
-	<sup>A value between 6144-12288 (6-12GB) should be more than enough, as the default is 2048 (2GB).</sup>
+	<sup>A value between 6144-12288 (6-12GB) should be more than enough, as the default size is 2048 (2GB).</sup>
 
 ### Advanced parameters
 I strongly recommend **not** using these parameters unless you already understand whether or not the architectural features of your CPU can benefit from them, as they have the potential to worsen performance unless properly understood.  
-
-**Please note that these parameters are currently only supported on Profiling build V32 or later.**
 
 * -cpuAffinity
 	* Tells the game which specific CPU cores to use, via a bitmask value.  
@@ -176,26 +174,23 @@ In-game graphical settings won't be explained in too much depth, as the performa
 	*  Generally recommended to keep this at the minimum of what you require for your gameplay.
 * Shadows and shadow distance.
 	* Highly recommended to disable shadows, as their FPS reduction is often significant.  
- 	**It is important to reduce shadow distance to the minimum value, as there is a bug which reduces FPS even if shadows are disabled.**  
+ 	**It's important to reduce shadow distance to the minimum value, as there is a bug which reduces FPS even if shadows are disabled.**  
 	<sub>If you wish to keep shadows enabled, setting it to Standard or higher can sometimes yield more performance than Low, as this shifts more of the rendering computation from the CPU to the GPU.</sub>
 
 ### GPU intensive settings
 
 <sup>Please note that some of these settings may appear to have little to no performance impact if the CPU or RAM are the primary bottleneck.</sup>
-* Sampling.
-	* Highly recommended to keep at 100%, setting this higher can result in lower FPS while barely improving visual quality.  
-	<sub>Setting this lower than 100% can increase performance if the GPU is the major bottleneck, however it will often significantly degrade visual quality.</sub>
 * Particles.
-	* Generally recommended to set to Low, as various explosions and other particle effects can cause sudden FPS drops on higher settings.
+	* Generally recommended to set to Low, as various explosions and other particle effects can cause significant dips in frame rate on higher settings.
 * AO.
 	* Generally recommended to disable, often incurs a slight but measurable performance impact when enabled.
 * FSAA.
-	* Recommended to set to 2x or 4x, going higher can greatly increase strain on the GPU.
+	* Recommended to set to 2x or 4x, going higher will greatly increase strain on the GPU while only looking marginally better.
 * PPAA.
 	* CMAA is highly recommended as it looks almost identical to SMAA, while being significantly less GPU intensive.
 
 # Yet Another Arma Benchmark (YAAB)
-YAAB is a widely used Arma 3 performance benchmarking scenario made by Sams. It is ideal for measuring differences in performance while experimenting with parameters, overclocking, graphical settings, memory allocators and profiling builds, etc.
+YAAB is a widely used Arma 3 performance benchmarking scenario made by Sams. It's ideal for measuring differences in performance while experimenting with parameters, overclocking, graphical settings, memory allocators and profiling builds, etc.
 
 ## Downloading and using YAAB
 
@@ -222,10 +217,11 @@ Alternatively, you can navigate to the Arma 3 Workshop in your Steam client, the
 # Frequently asked questions (FAQ)
 
 ### How much FPS can I expect to gain if I follow everything in this guide?
-It's impossible to estimate a specific value or range, as there are literally *dozens* of factors which affect FPS in Arma 3, such as system hardware, missions, maps, mods, server player count, AI count, asset count and so forth. The only trend I've observed is that the more modern and high-end your hardware is, the more you gain from these tips.
+It's impossible to estimate a specific value or range, as there are *dozens* of factors which affect FPS in Arma 3, such as system hardware, missions, maps, mods, server player count, AI count, asset count and so forth. The only trend I've observed is the more modern and high-end your hardware is, the more you gain from these tips.
 
 ### I did everything in this guide, but my FPS barely improved, why?
-Without knowing specifics about your hardware, mods you use and missions you play, it's difficult to give an exact answer. However it's usually one of two things (or both) - either your hardware (or some part of it) is low-end or quite dated, or the missions you play / mods you use are very computationally demanding. Typically in these situations the only things you can do to notably improve FPS are upgrade your hardware or consider overclocking your existing hardware.
+Without knowing specifics about your hardware, mods you use and missions you play, it's difficult to give an exact answer. However it's usually one of two things (or both) - either your hardware (or some part of it) is low-end or dated, or the missions you play / mods you use are very computationally demanding. Typically in these situations the only things you can do to notably improve FPS are upgrade your hardware or consider overclocking your existing hardware.
 
 ### Why am I getting a "Blocked loading of file" error when trying to use mimalloc?
 Sometimes this happens for newly released versions of mimalloc, as there is a BattlEye whitelisting process to make sure the .dll is safe for use. Until the .dll has been whitelisted by BattlEye, it will prevent usage of it. This can sometimes take up to a few days, but it's usually pretty quick.
+
