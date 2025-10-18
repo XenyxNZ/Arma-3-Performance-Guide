@@ -216,7 +216,7 @@ Alternatively, you can navigate to the Arma 3 Workshop in your Steam client, the
 
 # Frequently asked questions (FAQ)
 
-### How much FPS can I expect to gain if I follow everything in this guide?
+### How many FPS can I expect to gain if I follow everything in this guide?
 It's impossible to estimate a specific value or range, as there are *dozens* of factors which affect FPS in Arma 3, such as system hardware, missions, maps, mods, server player count, AI count, asset count and so forth. The only trend I've observed is the more modern and high-end your hardware is, the more you gain from these tips.
 
 ### I did everything in this guide, but my FPS barely improved, why?
@@ -224,4 +224,5 @@ Without knowing specifics about your hardware, mods you use and missions you pla
 
 ### Why am I getting a "Blocked loading of file" error when trying to use mimalloc?
 Sometimes this happens for newly released versions of mimalloc, as there is a BattlEye whitelisting process to make sure the .dll is safe for use. Until the .dll has been whitelisted by BattlEye, it will prevent usage of it. This can sometimes take up to a few days, but it's usually pretty quick.
+
 
