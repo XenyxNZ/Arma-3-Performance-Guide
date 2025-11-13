@@ -23,7 +23,9 @@ Just like CPUs, Arma 3 is very responsive to RAM performance. Only a comparative
 
 **GPU**
 
-At the time of writing this, Arma 3 has a performance bias towards NVIDIA GPUs for reasons unknown to me (other Bohemia titles such as DayZ also exhibit this). This means an AMD GPU which should be the same performance as a competing NVIDIA GPU would perform noticeably worse in GPU bound scenarios. Because of this I'd typically recommend an NVIDIA GPU if you want the absolute best performance, though it's not overly important as GPUs are not the bottleneck in the majority of gameplay scenarios.
+Arma 3 favors NVIDIA GPUs because AMD’s higher DX11 overhead becomes a bottleneck under the aforementioned engine limitations. This means an AMD GPU that should perform similarly to an equivalent NVIDIA GPU would perform noticeably worse in GPU-bound scenarios.  
+
+For this reason I'd typically recommend an NVIDIA GPU if you want the absolute best performance, though it's not overly important as GPUs are not the bottleneck in the majority of gameplay scenarios.
 
 # Parameters
 Arma 3 supports launch parameters, which are configurable options that instruct the game to make use of various features and resources.
@@ -47,29 +49,23 @@ Only the recommended parameters for general use and optimal performance will be 
 * Extra threads
 	* Recommended to leave disabled, as the game already knows to do this when detecting how many cores the CPU has.
 * Enable Hyper-Threading
-	* Generally it is recommended to enable this. However, if you're on a modern CPU with 8 or more cores, disabling Hyper-Threading can sometimes yield slightly more performance. Try YAAB benchmarking with it disabled to see if it does provide a performance benefit on your system.  
+	* Generally it is recommended to enable this. However if you're using a modern CPU with 8 or more cores, disabling Hyper-Threading can sometimes yield slightly more performance. Try YAAB benchmarking with it disabled to see if it does provide a performance benefit on your system.  
 	<sub>Please note that Enable Hyper-Threading will be ignored when using the CPU count parameter.</sub>
 * Memory allocator (64-bit)
 	* Enables the ability to switch between different memory allocators. mimalloc is *highly* recommended, otherwise leave disabled unless experimenting with the already provided memory allocators.  
 	<sub>mimalloc can be found within the **Memory allocators** section of this guide.</sub>
 * Enabled Large-page Support
-	* Recommended to enable for additional performance. This is an alternative memory management technique that uses larger memory blocks than the default (4KB) page size.  
+	* Recommended to enable for additional performance. This enables the use of larger (2MB) memory pages, increasing memory-management efficiency.  
 	<sub>Please note that by default your Windows profile won't have the required privileges to use Large-pages even if you enable this parameter. For programs to use Large-pages, Lock Pages in Memory needs to be configured in the Group Policy Editor, which is discussed in the **Memory allocators** section of this guide.</sub>
+* Command line
+	* Recommended method for setting the parameters discussed below.
 
-## Steam launch options
-Several supported parameters are not listed in the game launcher. Using Steam's launch options is the recommended method for enabling them, as some of the following parameters do not work from a parameters file.
+## Command line
+Several supported parameters are not listed in the game launcher. Using the launcher's command line parameter is the recommended method for passing them to the game.
 
-### How to find and use Steam's launch options feature
-* Right-click Arma 3 in your Steam library list, then click "Properties...".
-* Under the General tab will be a "Launch Options" section with a text box below it, this is where you put the parameters you want to use.
-  
 A list of all available parameters can be found [here](https://community.bistudio.com/wiki/Arma_3:_Startup_Parameters).
 
 ### Which parameters to set 
-Optionally, you can copy the below prewritten parameters and paste them as is:  
-```
--setThreadCharacteristics -maxFileCacheSize=12288
-```
 
 * -setThreadCharacteristics
 	* This registers the game's executable as a "Game" in Windows for additional performance.  
@@ -77,6 +73,11 @@ Optionally, you can copy the below prewritten parameters and paste them as is:
 * -maxFileCacheSize
 	* Sets the maximum filecache size (in MB) to be used for caching gamedata loaded from disk. Performance gains from this are likely negligible, however in certain situations it may help.  
 	<sup>A value between 6144-12288 (6-12GB) should be more than enough, as the default size is 2048 (2GB).</sup>
+
+Optionally, you can copy the below prewritten parameters and paste them into the Command line parameter as is:  
+```
+-setThreadCharacteristics -maxFileCacheSize=12288
+```
 
 ### Advanced parameters
 I strongly recommend **not** using these parameters unless you already understand whether or not the architectural features of your CPU can benefit from them, as they have the potential to worsen performance unless properly understood.  
@@ -111,24 +112,27 @@ Memory allocators are components that manage how an application allocates and de
 mimalloc is a high performance memory allocator managed and maintained by Microsoft.  
 John Gold King has created a fork of it which is designed for use with Arma 3.  
 
-mimalloc is *highly* recommended, as performance gains can be very noticeable when Lock Pages in Memory is enabled.
+mimalloc is *highly* recommended, as performance gains can be very noticeable when Lock Pages in Memory and Large-pages are enabled.
 
 ### Downloading mimalloc
 mimalloc is available at John Gold King's GitHub page, which can be found [here](https://github.com/GoldJohnKing/mimalloc/releases).
 
-* To download the latest, or previous versions of mimalloc, look for the "Assets" section found at the bottom of each release, then download the **.dll** file contained within it. Downloading the Source code (zip) and (tar.gz) is not necessary.
+* To download the latest, or previous versions of mimalloc, look for the "Assets" section found at the bottom of each release, then download the **.dll** file contained within it. **Downloading the Source code (zip) and (tar.gz) is not necessary.**
 
 ## Taking full advantage of memory allocators
-Arma 3 supports Large-pages, which is a feature that requires Lock Pages in Memory (LPIM) privileges. This prevents Windows from shifting Arma 3's application data into virtual memory. Enabling privileges for this can increase in-game performance, as virtual memory is significantly slower than physical memory (RAM).
+To get the most out of memory allocators, some Windows policy configuration is required.
 
 ### Enabling Lock Pages in Memory
+As mentioned in the parameters section, to make use of Large-pages you must configure Lock Pages in Memory.  
 
-Please note that a **Professional, Enterprise or Education** edition of Windows is required to access the LPIM feature.
+Lock Pages in Memory can provide performance benefits of its own, as it prevents Windows from shifting Arma 3's data into the pagefile. Keeping data out of the pagefile can reduce stutters, since it never needs to be reloaded from disk.
+
+**Please note that a Professional, Enterprise or Education edition of Windows is required to access the Lock Pages in Memory feature.**
 
 * Press the keyboard shortcut Windows+R to open the Run command.
 * Type "gpedit.msc" into the text box, then press Enter or click "OK" to open the Local Group Policy Editor.
 * On the left side of the Local Group Policy Editor window, expand the hierarchy as follows.
-* Computer Configuration -> Windows Settings -> Security Settings -> Local Policies. 
+* Computer Configuration -> Windows Settings -> Security Settings -> Local Policies.
 * Select the "User Rights Assignment" folder.
 * This should open a large list of policies on the right side, scroll down until you find "Lock pages in memory".
 * Double click the "Lock pages in memory" policy to open its properties.
@@ -216,7 +220,7 @@ Alternatively, you can navigate to the Arma 3 Workshop in your Steam client, the
 
 # Frequently asked questions (FAQ)
 
-### How many FPS can I expect to gain if I follow everything in this guide?
+### How much FPS can I expect to gain if I follow everything in this guide?
 It's impossible to estimate a specific value or range, as there are *dozens* of factors which affect FPS in Arma 3, such as system hardware, missions, maps, mods, server player count, AI count, asset count and so forth. The only trend I've observed is the more modern and high-end your hardware is, the more you gain from these tips.
 
 ### I did everything in this guide, but my FPS barely improved, why?
@@ -224,5 +228,6 @@ Without knowing specifics about your hardware, mods you use and missions you pla
 
 ### Why am I getting a "Blocked loading of file" error when trying to use mimalloc?
 Sometimes this happens for newly released versions of mimalloc, as there is a BattlEye whitelisting process to make sure the .dll is safe for use. Until the .dll has been whitelisted by BattlEye, it will prevent usage of it. This can sometimes take up to a few days, but it's usually pretty quick.
+
 
 
