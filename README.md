@@ -110,12 +110,12 @@ Memory allocators are components that manage how an application allocates and de
 
 ## mimalloc
 mimalloc is a high performance memory allocator managed and maintained by Microsoft.  
-John Gold King has created a fork of it which is designed for use with Arma 3.  
+Gold John King has created a fork of it which is designed for use with Arma 3.  
 
 mimalloc is *highly* recommended, as performance gains can be very noticeable when Lock Pages in Memory and Large-pages are enabled.
 
 ### Downloading mimalloc
-mimalloc is available at John Gold King's GitHub page, which can be found [here](https://github.com/GoldJohnKing/mimalloc/releases).
+mimalloc is available at Gold John King's GitHub page, which can be found [here](https://github.com/GoldJohnKing/mimalloc/releases).
 
 * To download the latest, or previous versions of mimalloc, look for the "Assets" section found at the bottom of each release, then download the **.dll** file contained within it. **Downloading the Source code (zip) and (tar.gz) is not necessary.**
 
@@ -228,6 +228,7 @@ Without knowing specifics about your hardware, mods you use and missions you pla
 
 ### Why am I getting a "Blocked loading of file" error when trying to use mimalloc?
 Sometimes this happens for newly released versions of mimalloc, as there is a BattlEye whitelisting process to make sure the .dll is safe for use. Until the .dll has been whitelisted by BattlEye, it will prevent usage of it. This can sometimes take up to a few days, but it's usually pretty quick.
+
 
 
 
