@@ -29,7 +29,7 @@ Intel (LGA1851)
 
 * Intel's officially supported memory speed increases with each generation - the original Core Ultra 200S series supports up to 6400 MT/s, while the newer 200S Plus refresh supports up to 7200 MT/s. A kit at or near your CPU's official supported maximum speed with the lowest CL you can find is recommended.
 
-* Speeds well beyond official spec (8000+ MT/s) are achievable on these platforms, particularly with CUDIMM memory. However, be aware that at high frequencies the memory controller runs at a divided ratio (Gear 2/Gear 4), so real-world latency does not improve anywhere near as much as the bandwidth figures suggest - and for Arma 3, latency is what matters most. These kits also carry a heavy price premium, and a stability tuning burden that is hard to justify for the modest FPS difference if you're unfamiliar with RAM overclocking/tuning.
+* Speeds well beyond official spec (8000+ MT/s) are achievable on these platforms, particularly with CUDIMM memory. However, be aware that at high frequencies the memory controller runs at a divided ratio (Gear 2/Gear 4), so real-world latency does not improve anywhere near as much as the bandwidth figures suggest. These kits also carry a heavy price premium, and a potential stability tuning burden that is hard to justify for the modest FPS difference if you're unfamiliar with RAM overclocking/tuning.
 
 Intel (LGA1700 — 12th/13th/14th gen)
 
@@ -46,7 +46,7 @@ Older systems (DDR4)
 
 Maximum stable RAM speed depends on several factors including CPU memory controller, motherboard, RAM stick density/ranks, and total RAM sticks installed. 
 
-**If you are planning to run high density kits (eg: 2x32GB or 2x48GB), or four sticks instead of two, disregard the aforementioned DDR5 speed recommendations above 6000 MT/s, as these configurations put much more strain on the CPU memory controller, limiting how fast they can run without causing instability (crashes/blue screens).**
+**If you are planning to run high density kits (e.g. 2x32GB or 2x48GB), or four sticks instead of two, disregard the aforementioned DDR5 speed recommendations above 6000 MT/s, as these configurations put much more strain on the CPU memory controller, limiting how fast they can run without causing instability.**
 
 ### GPU
 
