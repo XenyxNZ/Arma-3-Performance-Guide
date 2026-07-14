@@ -7,25 +7,52 @@ Arma 3 is built on Bohemia's Real Virtuality engine, and contrary to popular bel
 
 ## Choice of hardware
 
-**CPU**
+### CPU
 
 Arma 3 is very responsive to CPU core performance, as well as cache size. Nowadays it's possible to get very good out-of-the-box frame rates using a CPU which utilizes AMD's 3D V-Cache technology - these CPUs have significantly more on-board memory (cache), which is used to store frequently accessed data. The more cache memory a CPU has, the more performance-sensitive data can be stored in it, as opposed to fetching it from RAM, which is significantly slower by comparison. 
 
 As mentioned above, an AMD CPU with 3D V-Cache is *highly* recommended for your next PC build, or upgrade. These CPUs not only greatly improve performance in Arma 3, but also almost every other game. Even if you are on an older AM4 socket system, you can still reap the benefits of this technology with a 5800X3D, 5700X3D or 5600X3D.
 
-**RAM**
+### RAM
 
-Just like CPUs, Arma 3 is very responsive to RAM performance. Only a comparatively small amount of data can be stored in CPU cache, so having a kit of RAM which is both high frequency and low latency is important to ensure data is fetched as quickly as possible. 
+Just like CPUs, Arma 3 is very responsive to RAM performance. Only a comparatively small amount of data can be stored in CPU cache, so having a kit of RAM which is both high frequency and low latency is important to ensure data is fetched as quickly as possible. Note that Arma 3 tends to benefit more from lower latency than from raw bandwidth, which is worth keeping in mind when comparing kits.
 
-* For modern systems using DDR5, a kit of RAM running at 6000 MT/s with a CAS latency (CL) of 30 or lower is recommended.  
+Before anything else, make sure your RAM's XMP (Intel) or EXPO/DOCP (AMD) profile is enabled in your motherboard's BIOS. RAM does not run at its advertised speed out of the box - without a profile enabled, a 6000 MT/s kit will typically run at a much slower default speed (e.g. 4800 MT/s with very loose timings), and this is one of the most common and easily fixed performance losses in any system.
 
-* For older systems using DDR4, a kit of RAM running at 3600 MT/s with a CAS latency (CL) of 16 or lower is recommended.
+AMD (AM5)
 
-**GPU**
+* A kit running at 6000 MT/s with a CAS latency (CL) of 30 or lower is recommended. This is because 6000 MT/s is generally the highest speed at which the memory controller and Infinity Fabric can run in their optimal 1:1 ratio - higher frequencies apply a desynchronized ratio, where the resulting added latency usually cancels out the bandwidth gains.
 
-Arma 3 favors NVIDIA GPUs because AMD’s higher DX11 overhead becomes a bottleneck under the aforementioned engine limitations. This means an AMD GPU that should perform similarly to an equivalent NVIDIA GPU would perform noticeably worse in GPU-bound scenarios.  
+* If you're using a CPU with 3D V-Cache, RAM speed and timings matter significantly less, as the large cache absorbs much of the traffic that would otherwise hit RAM. A standard 5600-6000 CL32-36 kit gets you 95% of the way there; spending extra on a low-latency kit will yield marginal performance gains.
 
-For this reason I'd typically recommend an NVIDIA GPU if you want the absolute best performance, though it's not overly important as GPUs are not the bottleneck in the majority of gameplay scenarios.
+Intel (LGA1851)
+
+* Intel's officially supported memory speed increases with each generation - the original Core Ultra 200S series supports up to 6400 MT/s, while the newer 200S Plus refresh supports up to 7200 MT/s. A kit at or near your CPU's official supported maximum speed with the lowest CL you can find is recommended.
+
+* Speeds well beyond official spec (8000+ MT/s) are achievable on these platforms, particularly with CUDIMM memory. However, be aware that at high frequencies the memory controller runs at a divided ratio (Gear 2/Gear 4), so real-world latency does not improve anywhere near as much as the bandwidth figures suggest - and for Arma 3, latency is what matters most. These kits also carry a heavy price premium, and a stability tuning burden that is hard to justify for the modest FPS difference if you're unfamiliar with RAM overclocking/tuning.
+
+Intel (LGA1700 — 12th/13th/14th gen)
+
+* Official DDR5 support is 4800 MT/s on 12th gen and 5600 MT/s on 13th/14th gen, however in practice these CPUs can typically run faster kits without issue. For 13th/14th gen, a 6600–6800 MT/s kit with the lowest CL you can find is recommended; 12th gen memory controllers are weaker, so 6000–6400 MT/s is more achievable without running into stability issues.
+
+* LGA1700 also supports DDR4, depending on the motherboard. If you're on a DDR4 board, the DDR4 recommendations below apply.
+
+Older systems (DDR4)
+
+* A kit running at 3600 MT/s with a CAS latency (CL) of 16 or lower is recommended.
+* On AM4 Ryzen systems, 3600 MT/s is the practical ceiling for keeping the Infinity Fabric in its 1:1 ratio (FCLK 1800 MHz) - the same principle as AM5 above.
+
+**Note:** 
+
+Maximum stable RAM speed depends on several factors including CPU memory controller, motherboard, RAM stick density/ranks, and total RAM sticks installed. 
+
+**If you are planning to run high density kits (eg: 2x32GB or 2x48GB), or four sticks instead of two, disregard the aforementioned DDR5 speed recommendations above 6000 MT/s, as these configurations put much more strain on the CPU memory controller, limiting how fast they can run without causing instability (crashes/blue screens).**
+
+### GPU
+
+Arma 3 favors NVIDIA GPUs due to lower driver overhead in DX11 games. NVIDIA's DX11 driver distributes its command submission work across multiple CPU threads, while AMD's DX11 driver places a heavier load on a single CPU thread. In a game as CPU-limited as Arma 3, that extra driver overhead compounds the engine's existing main-thread bottleneck, meaning an AMD GPU that should perform on par with its NVIDIA equivalent can deliver noticeably lower FPS in the CPU-bound scenarios that make up the majority of Arma 3 gameplay.
+
+For this reason I'd typically recommend an NVIDIA GPU if you want the absolute best performance. That said, if you're genuinely GPU-bound due to running very high resolutions and/or graphical settings, this driver overhead mostly disappears.
 
 # Parameters
 Arma 3 supports launch parameters, which are configurable options that instruct the game to make use of various features and resources.
