@@ -21,9 +21,9 @@ Before anything else, make sure your RAM's XMP (Intel) or EXPO/DOCP (AMD) profil
 
 AMD (AM5)
 
-* A kit running at 6000 MT/s with a CAS latency (CL) of 30 or lower is recommended. This is because 6000 MT/s is generally the highest speed at which the memory controller and Infinity Fabric can run in their optimal 1:1 ratio - higher frequencies apply a desynchronized ratio, where the resulting added latency usually cancels out the bandwidth gains.
+* A kit running at 6000 MT/s with a CAS latency (CL) of 30 or lower is recommended. This is because 6000 MT/s (3000 MHz) is generally the highest speed at which the CPU's memory controller can operate while maintaining an optimal 1:1 ratio with RAM - higher frequencies apply a divided ratio, making the memory controller operate at half of RAM frequency, which results in added latency that then negates any potential performance gains from increased bandwidth.
 
-* If you're using a CPU with 3D V-Cache, RAM speed and timings matter significantly less, as the large cache absorbs much of the traffic that would otherwise hit RAM. A standard 5600-6000 CL32-36 kit gets you 95% of the way there; spending extra on a low-latency kit will yield marginal performance gains.
+* If you're using a CPU with 3D V-Cache, RAM speed and timings matter significantly less, as the large cache absorbs much of the traffic that would otherwise hit RAM. A standard 5400-6000 CL32-36 kit gets you 95% of the way there; spending extra on a low-latency kit will yield largely unnoticeable performance gains on these CPUs.
 
 Intel (LGA1851)
 
@@ -33,24 +33,24 @@ Intel (LGA1851)
 
 Intel (LGA1700 — 12th/13th/14th gen)
 
-* Official DDR5 support is 4800 MT/s on 12th gen and 5600 MT/s on 13th/14th gen, however in practice these CPUs can typically run faster kits without issue. For 13th/14th gen, a 6600–6800 MT/s kit with the lowest CL you can find is recommended; 12th gen memory controllers are weaker, so 6000–6400 MT/s is more achievable without running into stability issues.
+* Official DDR5 support is 4800 MT/s on 12th gen and 5600 MT/s on 13th/14th gen, however in practice these CPUs can typically run faster kits without issue. For 13th/14th gen, a 6400–6600 MT/s kit with the lowest CL you can find is recommended; 12th gen memory controllers are weaker, so 6000–6400 MT/s is more achievable without running into stability issues.
 
 * LGA1700 also supports DDR4, depending on the motherboard. If you're on a DDR4 board, the DDR4 recommendations below apply.
 
 Older systems (DDR4)
 
 * A kit running at 3600 MT/s with a CAS latency (CL) of 16 or lower is recommended.
-* On AM4 Ryzen systems, 3600 MT/s is the practical ceiling for keeping the Infinity Fabric in its 1:1 ratio (FCLK 1800 MHz) - the same principle as AM5 above.
+* On AM4 Ryzen systems, 3600 MT/s is the practical ceiling for keeping the Infinity Fabric in the ideal 1:1 ratio (FCLK 1800 MHz).
 
 **Note:** 
 
-Maximum stable RAM speed depends on several factors including CPU memory controller, motherboard, RAM stick density/ranks, and total RAM sticks installed. 
+Maximum stable RAM speed depends on several factors including CPU memory controller quality (silicon lottery), motherboard, RAM stick density/ranks, and total RAM sticks installed. 
 
 **If you are planning to run high density kits (e.g. 2x32GB or 2x48GB), or four sticks instead of two, disregard the aforementioned DDR5 speed recommendations above 6000 MT/s, as these configurations put much more strain on the CPU memory controller, limiting how fast they can run without causing instability.**
 
 ### GPU
 
-Arma 3 favors NVIDIA GPUs due to lower driver overhead in DX11 games. NVIDIA's DX11 driver distributes its command submission work across multiple CPU threads, while AMD's DX11 driver places a heavier load on a single CPU thread. In a game as CPU-limited as Arma 3, that extra driver overhead compounds the engine's existing main-thread bottleneck, meaning an AMD GPU that should perform on par with its NVIDIA equivalent can deliver noticeably lower FPS in the CPU-bound scenarios that make up the majority of Arma 3 gameplay.
+Arma 3 favors NVIDIA GPUs due to lower driver overhead in DX11 games. NVIDIA's DX11 driver distributes its command submission work across multiple CPU threads, while AMD's DX11 driver places a heavier load on a single CPU thread. In a game as CPU-bound as Arma 3, that extra driver overhead compounds the engine's existing main-thread bottleneck, meaning an AMD GPU that should perform on par with its NVIDIA equivalent can deliver noticeably lower FPS in the CPU-bound scenarios that make up the majority of Arma 3 gameplay.
 
 For this reason I'd typically recommend an NVIDIA GPU if you want the absolute best performance. That said, if you're genuinely GPU-bound due to running very high resolutions and/or graphical settings, this driver overhead mostly disappears.
 
@@ -111,7 +111,8 @@ I strongly recommend **not** using these parameters unless you already understan
 
 * -cpuAffinity
 	* Tells the game which specific CPU cores to use, via a bitmask value.  
-	<sup>This can be useful for CPUs with multiple CCDs, or P and E cores.</sup>
+	<sub>This can be useful for CPUs with multiple CCDs, or P and E cores.</sub>  
+	<sup>Please note the CPU count, Extra threads and Enable Hyper-Threading parameters will be ignored when using this parameter.</sup>
 * -cpuMainThreadAffinity
 	* Tells the game which specific CPU core to use for the game's main thread, via a bitmask value.
 
@@ -154,7 +155,9 @@ As mentioned in the parameters section, to make use of Large-pages you must conf
 
 Lock Pages in Memory can provide performance benefits of its own, as it prevents Windows from shifting Arma 3's data into the pagefile. Keeping data out of the pagefile can reduce stutters, since it never needs to be reloaded from disk.
 
-**Please note that a Professional, Enterprise or Education edition of Windows is required to access the Lock Pages in Memory feature.**
+**Please note that a Professional, Enterprise or Education edition of Windows is required to access the Lock Pages in Memory feature.**  
+
+<sup>It is possible to gain access to the Group Policy Editor on Home/other editions of Windows via a few different methods, though it won't be covered in this guide. If you're interested I recommend following [this guide](https://geekchamp.com/how-to-enable-the-gpedit-msc-on-windows-10-and-11-home/), then returning here to follow the below steps.</sup>  
 
 * Press the keyboard shortcut Windows+R to open the Run command.
 * Type "gpedit.msc" into the text box, then press Enter or click "OK" to open the Local Group Policy Editor.
